@@ -36,19 +36,17 @@
           <h2 class="page__hidden">Основные товары</h2>
           <table class="catalog__list catalog-list">
             <tr class="page__hidden">
-              <th>Название товара</th>
-              <th>Изображение товара</th>
-              <th>Масса</th>
-              <th>Вкус</th>
-              <th>Цена</th>
-              <th>Заказ</th>
+              <th scope="col">Название товара</th>
+              <th scope="col">Изображение товара</th>
+              <th scope="col">Масса</th>
+              <th scope="col">Вкус</th>
+              <th scope="col">Цена</th>
+              <th scope="col">Заказ</th>
             </tr>
             <tr class="catalog-list__item catalog-item">
-              <td class="catalog-item__title">
-                <a class="catalog-item__link" href="#">
-                  <h3>Cat Energy PRO 500 г</h3>
-                </a>
-              </td>
+              <th class="catalog-item__title" scope="row">
+                <a class="catalog-item__link" href="#">Cat Energy PRO 500 г</a>
+              </th>
               <td class="catalog-list__image">
                 <img src="img/catalog/pro-chiken-500.png" width="68" height="78" alt="">
               </td>
@@ -60,11 +58,9 @@
               </td>
             </tr>
             <tr class="catalog-list__item catalog-item">
-              <td class="catalog-item__title">
-                <a class="catalog-item__link" href="#">
-                  <h3>Cat Energy PRO 1000 г</h3>
-                </a>
-              </td>
+              <th class="catalog-item__title" scope="row">
+                <a class="catalog-item__link" href="#">Cat Energy PRO 1000 г</a>
+              </th>
               <td class="catalog-item__image">
                 <img src="img/catalog/pro-chiken-1000.png" width="84" height="101" alt="">
               </td>
@@ -76,11 +72,9 @@
               </td>
             </tr>
             <tr class="catalog-list__item catalog-item">
-              <td class="catalog-item__title">
-                <a class="catalog-item__link" href="#">
-                  <h3>Cat Energy PRO 500 г</h3>
-                </a>
-              </td>
+              <th class="catalog-item__title" scope="row">
+                <a class="catalog-item__link" href="#">Cat Energy PRO 500 г</a>
+              </th>
               <td class="catalog-item__image">
                 <img src="img/catalog/pro-fish-500.png" width="68" height="78" alt="">
               </td>
@@ -92,11 +86,9 @@
               </td>
             </tr>
             <tr class="catalog-list__item catalog-item">
-              <td class="catalog-item__title">
-                <a class="catalog-item__link" href="#">
-                  <h3>Cat Energy PRO 1000 г</h3>
-                </a>
-              </td>
+              <th class="catalog-item__title" scope="row">
+                <a class="catalog-item__link" href="#">Cat Energy PRO 1000 г</a>
+              </th>
               <td class="catalog-item__image">
                 <img src="img/catalog/pro-fish-1000.png" width="84" height="101" alt="">
               </td>
@@ -108,11 +100,9 @@
               </td>
             </tr>
             <tr class="catalog-list__item catalog-item">
-              <td class="catalog-item__title">
-                <a class="catalog-item__link" href="#">
-                  <h3>Cat Energy Slim 500 г</h3>
-                </a>
-              </td>
+              <th class="catalog-item__title" scope="row">
+                <a class="catalog-item__link" href="#">Cat Energy Slim 500 г</a>
+              </th>
               <td class="catalog-item__image">
                 <img src="img/catalog/pro-buckwheat-500.png" width="68" height="78" alt="">
               </td>
@@ -124,11 +114,9 @@
               </td>
             </tr>
             <tr class="catalog-list__item catalog-item">
-              <td class="catalog-item__title">
-                <a class="catalog-item__link" href="#">
-                  <h3>Cat Energy Slim 1000 г</h3>
-                </a>
-              </td>
+              <th class="catalog-item__title" scope="row">
+                <a class="catalog-item__link" href="#">Cat Energy Slim 1000 г</a>
+              </th>
               <td class="catalog-item__image">
                 <img src="img/catalog/pro-buckwheat-1000.png" width="84" height="101" alt="">
               </td>
@@ -140,11 +128,9 @@
               </td>
             </tr>
             <tr class="catalog-list__item catalog-item">
-              <td class="catalog-item__title">
-                <a class="catalog-item__link" href="#">
-                  <h3>Cat Energy Slim 500 г</h3>
-                </a>
-              </td>
+              <th class="catalog-item__title" scope="row">
+                <a class="catalog-item__link" href="#">Cat Energy Slim 500 г</a>
+              </th>
               <td class="catalog-item__image">
                 <img src="img/catalog/pro-rice-500.png" width="68" height="78" alt="">
               </td>
@@ -155,14 +141,14 @@
                 <a class="button" href="#">Заказать</a>
               </td>
             </tr>
+            <tr class="catalog-list__item catalog-all">
+              <td colspan="6">
+                <p class="catalog-all__title">Показать еще 100500 товаров</p>
+                <p class="catalog-all__text">На самом деле вкусов гораздо больше!</p>
+                <a class="button button--color_gray" href="#">Показать все</a>
+              </td>
+            </tr>
           </table>
-          <div class="catalog__all-items catalog-all">
-            <h3 class="catalog-all__title">Показать еще 100500 товаров</h3>
-            <div class="catalog-all__text">
-              <p>На самом деле вкусов гораздо больше!</p>
-            </div>
-            <a class="button button--color_gray" href="#">Показать все</a>
-          </div>
         </div>
       </section>
       <section class="additional">
@@ -170,15 +156,13 @@
           <h2 class="additional__title section-title">Дополнительные товары</h2>
           <table class="additional__list">
             <tr class="page__hidden">
-              <th>Название товара</th>
-              <th>Количество</th>
-              <th>Цена</th>
-              <th>Заказ</th>
+              <th scope="col">Название товара</th>
+              <th scope="col">Количество</th>
+              <th scope="col">Цена</th>
+              <th scope="col">Заказ</th>
             </tr>
             <tr class="additional__item additional-item">
-              <td class="additional-item__title">
-                <h3 class="additional-item__header">Сахарозаменитьель</h3>
-              </td>
+              <th class="additional-item__title" scope="row">Сахарозаменитьель</th>
               <td class="additional-item__count">1 упаковка (100 г)</td>
               <td class="additional-item__price">200 р.</td>
               <td class="additional-item__order">
@@ -186,9 +170,7 @@
               </td>
             </tr>
             <tr class="additional__item additional-item">
-              <td class="additional-item__title">
-                <h3 class="additional-item__header">Питьевая вода</h3>
-              </td>
+              <th class="additional-item__title" scope="row">Питьевая вода</th>
               <td class="additional-item__count">5 литров</td>
               <td class="additional-item__price">50 р.</td>
               <td class="additional-item__order">
@@ -196,9 +178,7 @@
               </td>
             </tr>
             <tr class="additional__item additional-item">
-              <td class="additional-item__title">
-                <h3 class="additional-item__header">Молоко</h3>
-              </td>
+              <th class="additional-item__title" scope="row">Молоко</th>
               <td class="additional-item__count">1 литр</td>
               <td class="additional-item__price">100 р.</td>
               <td class="additional-item__order">
@@ -206,9 +186,7 @@
               </td>
             </tr>
             <tr class="additional__item additional-item">
-              <td class="additional-item__title">
-                <h3 class="additional-item__header">Витамины</h3>
-              </td>
+              <th class="additional-item__title" scope="row">Витамины</th>
               <td class="additional-item__count">1 упаковка (30 г)</td>
               <td class="additional-item__price">300 р.</td>
               <td class="additional-item__order">
