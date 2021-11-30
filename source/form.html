@@ -1,32 +1,13 @@
+{% set pageId = 2 %}
+{% set permalink = pages[pageId].path %}
+
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body class="page__body">
-    <header class="page__header main-header">
-      <div class="main-header__container page__centerer">
-        <a class="main-header__logo logo" href="#" aria-label="Логотип «Кэт энерджи».">
-          <img  class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="">
-          <img  class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="">
-        </a>
-        <nav class="main-header__nav main-nav">
-          <button class="main-nav__toggler" type="button" hidden>Открыть меню</button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html" aria-current="page">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+{% include "head.njk" %}
+
+<body class="page__body">
+  {% include "header.njk" %}
+
     <main class="page__main">
       <div class="page__ceterer page-title">
         <h1 class="page-title__header">Подбор программы</h1>
@@ -118,38 +99,7 @@
         </div>
       </section>
     </main>
-    <footer class="page__footer main-footer">
-      <div class="main-footer__container page__centerer">
-        <a class="main-footer__logo logo" href="#" aria-current="page" aria-label="Логотип «Кэт энерджи».">
-          <img  class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="">
-        </a>
-        <section class="main-footer__socials social">
-          <h2 class="page__hidden">Подписывайтесь на наши социальные сети</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank">
-                <span class="page__hidden">Кэт энерджи во Вконтакте</span>
-                <svg class="social__icon" width="22" height="22" aria-hidden="true" focusable="false"></svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.instagram.com/htmlacademy/" rel="noopener nofollow" target="_blank">
-                <span class="page__hidden">Кэт энерджи в Инстаграм</span>
-                <svg class="social__icon" width="22" height="22" aria-hidden="true" focusable="false"></svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.facebook.com/htmlacademy" rel="noopener nofollow" target="_blank">
-                <span class="page__hidden">Кэт энерджи в Фейсбуке</span>
-                <svg class="social__icon" width="22" height="22" aria-hidden="true" focusable="false"></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <a class="main-footer__creators creators" href="https://htmlacademy.ru/" rel="noopener nofollow" target="_blank">
-          <span class="creators__text">HTML Academy</span>
-        </a>
-      </div>
-    </footer>
+
+  {% include "footer.njk" %}
   </body>
 </html>
