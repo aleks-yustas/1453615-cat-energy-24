@@ -1,7 +1,32 @@
 .page {
   font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-color-main);
 }
 
 .page__body {
   margin: 0;
+}
+
+.page__header {
+  background-color: var(--bg-color-main);
+}
+
+.page__centerer {
+  width: 320px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.page__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

@@ -1,0 +1,32 @@
+.features {
+  background-color: var(--bg-color-main);
+}
+
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.features__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: var(--bg-color-accent);
+  }
+}

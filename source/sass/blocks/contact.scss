@@ -1,0 +1,27 @@
+.contact__content {
+  background-color: var(--bg-color-main);
+}
+
+.contact__title {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--text-color-accent);
+}
+
+.contact__address {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contact__map {
+  height: 362px;
+
+  background-color: var(--bg-color-accent);
+  background-image: url("../../img/bg-map-mobile.jpg");
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

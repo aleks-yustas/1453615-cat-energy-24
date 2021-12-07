@@ -1,0 +1,33 @@
+.banner {
+  background-color: var(--bg-color-main);
+}
+
+.banner__container {
+  background-image:
+    url("../../img/bg-index-banner.jpg"),
+    linear-gradient(to bottom, var(--bg-color-accent) 0, var(--bg-color-accent) 302px, transparent 302px, transparent 100%);
+  background-position: center top, center top;
+  background-size: auto, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.banner__content {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  text-align: center;
+  color: var(--text-color-contrast);
+}
+
+.banner__title {
+  font-weight: inherit;
+  font-size: 36px;
+  line-height: 36px;
+  color: inherit;
+}
+
+.banner__text {
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
