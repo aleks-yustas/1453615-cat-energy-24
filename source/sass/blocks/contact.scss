@@ -1,5 +1,9 @@
 .contact__content {
   background-color: var(--bg-color-main);
+
+  &--inner {
+    background-color: var(--bg-color-darken);
+  }
 }
 
 .contact__title {

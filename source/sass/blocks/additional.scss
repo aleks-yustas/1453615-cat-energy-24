@@ -1,0 +1,23 @@
+.additional__list {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+.additional__order-all {
+  display: block;
+  min-height: 290px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color-contrast);
+  text-align: center;
+  text-decoration: none;
+
+  background-color: var(--bg-color-accent);
+  background-image: url("../../img/bg-order-mobile.jpg");
+  background-size: auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}

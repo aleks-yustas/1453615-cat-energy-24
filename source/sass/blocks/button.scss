@@ -2,6 +2,7 @@
   display: block;
   width: fit-content;
   padding: 14px 20px;
+  border: none;
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -13,8 +14,14 @@
   text-align: center;
 
   background-color: var(--bg-color-accent);
+  cursor: pointer;
 
   &--size_wide {
     width: 100%;
+  }
+
+  &--color_gray {
+    color: var(--text-color-main);
+    background-color: var(--bg-color-darken);
   }
 }

@@ -1,0 +1,52 @@
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.catalog-item__title {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color-dark);
+}
+
+.catalog-item__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.catalog-item__weight,
+.catalog-item__tasty,
+.catalog-item__price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  font-size: 12px;
+  line-height: 14px;
+
+  &::before {
+    margin-right: auto;
+    vertical-align: middle;
+  }
+}
+
+.catalog-item__weight::before {
+  content: "Масса";
+}
+
+.catalog-item__tasty::before {
+  content: "Вкус";
+}
+
+.catalog-item__price::before {
+  content: "Цена";
+}
+
+.catalog-item__order {
+  width: 100%;
+}

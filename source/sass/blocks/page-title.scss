@@ -1,0 +1,27 @@
+.page-title {
+  font-family: var(--accent-font);
+  color: var(--text-color-accent);
+}
+
+.page-title__header {
+  margin: 0;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.page-title__text {
+  margin: 0;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.page-title__header + .page-title__text {
+  margin-top: 37px;
+}

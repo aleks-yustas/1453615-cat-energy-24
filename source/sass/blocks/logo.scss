@@ -7,9 +7,12 @@
   padding: 12px 0 16px;
 
   text-decoration: none;
+
+  &[aria-current="page"] {
+    pointer-events: none;
+  }
 }
 
 .logo__image {
   margin-right: 56px;
 }
-

@@ -5,8 +5,8 @@ export default {
     { "id": 2, "path": "form.html", "name": "Подбор программы" }
   ],
   "socials": [
-    { "link": "https://vk.com/htmlacademy", "name": "Кэт энерджи во Вконтакте" },
-    { "link": "https://www.instagram.com/htmlacademy/", "name": "Кэт энерджи в Инстаграм" },
-    { "link": "https://www.facebook.com/htmlacademy", "name": "Кэт энерджи в Фейсбуке" }
+    { "id": "vk", "link": "https://vk.com/htmlacademy", "name": "Кэт энерджи во Вконтакте" },
+    { "id": "insta", "link": "https://www.instagram.com/htmlacademy/", "name": "Кэт энерджи в Инстаграм" },
+    { "id": "fb", "link": "https://www.facebook.com/htmlacademy", "name": "Кэт энерджи в Фейсбуке" }
   ]
 }
