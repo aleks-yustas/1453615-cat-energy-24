@@ -1,7 +1,7 @@
 import gulp from "gulp";
 import browser from "browser-sync";
 import plumber from "gulp-plumber";
-import data from "./source/js/data.js";
+import data from "./source/templates/data.js";
 import nunjucks from "gulp-nunjucks-render";
 import htmlmin from "gulp-htmlmin";
 import { htmlValidator } from "gulp-w3c-html-validator";
@@ -66,7 +66,7 @@ export function processStyles () {
 }
 
 export function processScripts () {
-  return src(["./source/js/*.js", "!./source/js/data.js"])
+  return src("./source/js/*.js")
     .pipe(terser())
     .pipe(
       rename({
@@ -159,7 +159,7 @@ function reloadServer (done) {
 function watchFiles () {
   watch("./source/sass/**/*.scss", series(processStyles));
   watch("./source/js/*.js", series(processScripts, reloadServer));
-  watch("./source/**/*.{html,njk}", series(processMarkup, reloadServer));
+  watch(["./source/**/*.{html,njk,js}", "!./source/js/**/*.js"], series(processMarkup, reloadServer));
   watch("./source/icons/**/*.svg", series(createSprite, reloadServer));
 }
 
