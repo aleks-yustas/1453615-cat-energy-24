@@ -4,6 +4,9 @@
   font-size: 14px;
   line-height: 18px;
   color: var(--text-color-main);
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .page__body {
