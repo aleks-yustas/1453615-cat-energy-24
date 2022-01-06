@@ -1,7 +1,7 @@
 <header class="page__header main-header">
   <div class="main-header__container page__centerer">
     <a class="main-header__logo logo" href="index.html"
-      {% if permalink === pages[0].path %}
+      {% if permalink == pages[0].path %}
         aria-current="page"
       {% endif %}
     aria-label="Логотип «Кэт энерджи».">
@@ -16,13 +16,11 @@
             <a
               class="main-nav__link"
               href="{{ page.path }}"
-              {% if permalink === page.path %}
+              {% if permalink == page.path %}
                 aria-current="page"
               {% endif %}
             >{{ page.name }}</a>
           </li>
-        {% else %}
-          <li>Из навигации пропали все пункты 😕</li>
         {% endfor %}
       </ul>
     </nav>

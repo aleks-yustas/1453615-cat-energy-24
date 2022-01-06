@@ -2,7 +2,7 @@ import gulp from "gulp";
 import browser from "browser-sync";
 import plumber from "gulp-plumber";
 import data from "./source/templates/data.js";
-import nunjucks from "gulp-nunjucks-render";
+import twig from "gulp-twig";
 import htmlmin from "gulp-htmlmin";
 import { htmlValidator } from "gulp-w3c-html-validator";
 import sass from "gulp-dart-sass";
@@ -24,8 +24,7 @@ const { src, dest, watch, series, parallel } = gulp;
 
 export function processMarkup () {
   return src("./source/*.html")
-    .pipe(nunjucks({
-      path: ["./source/templates/"],
+    .pipe(twig({
       data: data
     }))
     .pipe(htmlmin({ collapseWhitespace: true }))
@@ -34,12 +33,12 @@ export function processMarkup () {
 
 export function validateMarkup () {
   return src("./source/*.html")
-    .pipe(nunjucks({
-      path: ["./source/templates/"],
-      data: data
-    }))
-    .pipe(htmlValidator.analyzer())
-    .pipe(htmlValidator.reporter());
+  .pipe(twig({
+    data: data
+  }))
+  .pipe(dest("./build"))
+  .pipe(htmlValidator.analyzer())
+  .pipe(htmlValidator.reporter());
 }
 
 export function processStyles () {
@@ -159,7 +158,7 @@ function reloadServer (done) {
 function watchFiles () {
   watch("./source/sass/**/*.scss", series(processStyles));
   watch("./source/js/*.js", series(processScripts, reloadServer));
-  watch(["./source/**/*.{html,njk,js}", "!./source/js/**/*.js"], series(processMarkup, reloadServer));
+  watch(["./source/**/*.{html,twig}", "./source/templates/data.js"], series(processMarkup, reloadServer));
   watch("./source/icons/**/*.svg", series(createSprite, reloadServer));
 }
 
@@ -167,13 +166,13 @@ function watchFiles () {
 
 export const build = series(
   removeBuild,
-  copyAssets,
-  optimizeImages,
   parallel(
     processStyles,
     processMarkup,
     processScripts,
     createSprite,
+    copyAssets,
+    optimizeImages,
     createWebp,
     createAvif
   )
@@ -183,13 +182,13 @@ export const build = series(
 
 export default series(
   removeBuild,
-  copyAssets,
-  copyImages,
   parallel(
     processStyles,
     processMarkup,
     processScripts,
     createSprite,
+    copyAssets,
+    copyImages,
     createWebp,
     // createAvif
   ),

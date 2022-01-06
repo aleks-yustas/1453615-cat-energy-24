@@ -1,105 +1,99 @@
 {% set pageId = 2 %}
 {% set permalink = pages[pageId].path %}
+{% extends "./templates/layout.twig" %}
 
-<!DOCTYPE html>
-<html class="page" lang="ru">
-{% include "head.njk" %}
+{% block page__main %}
 
-<body class="page__body">
-  {% include "header.njk" %}
-
-    <main class="page__main">
-      <div class="page__centerer page-title">
-        <h1 class="page-title__header">Подбор программы</h1>
-        <p class="page-title__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      </div>
-      <section class="brief">
-        <div class="page__centerer">
-          <h2 class="page__hidden">Анкета</h2>
-          <form class="brief__form form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__fieldset form-fieldset">
-              <legend class="page__hidden">Расскажите о своём коте</legend>
-              <div class="form__field form-input">
-                <label class="form-input__label" for="brief_cat_name">Имя:*</label>
-                <input class="form-input__field" id="brief_cat_name" type="text" name="brief_cat_name" placeholder="Барсик" required>
-              </div>
-              <div class="form__field form-input">
-                <label class="form-input__label" for="brief_cat_weight">Вес (кг):*</label>
-                <input class="form-input__field" id="brief_cat_weight" type="number" name="brief_cat_weight" placeholder="7" required>
-              </div>
-              <div class="form__field form-input">
-                <label class="form-input__label" for="brief_cat_age">Возраст (лет):</label>
-                <input class="form-input__field" id="brief_cat_age" type="number" name="brief_cat_age" placeholder="7">
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset form-fieldset">
-              <legend class="page__hidden">Тип программы</legend>
-              <div class="form__field form-radio">
-                <input class="form-radio__input" id="brief_type_slim" type="radio" name="brief_type" value="slim" checked>
-                <label class="form-radio__label" for="brief_type_slim">Похудение</label>
-              </div>
-              <div class="form__field form-radio">
-                <input class="form-radio__input" id="brief_type_weight" type="radio" name="brief_type" value="weight">
-                <label class="form-radio__label" for="brief_type_weight">Набор массы</label>
-              </div>
-              <div class="form__field form-radio">
-                <input class="form-radio__input" id="brief_type_advice" type="radio" name="brief_type" value="advice">
-                <label class="form-radio__label" for="brief_type_advice">Не знаю (нужен ваш совет)</label>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset form-fieldset">
-              <legend class="form-fieldset__legend">Контактные данные (владельца кота)</legend>
-              <div class="form__field form-input form-input--type_email">
-                <label class="form-input__label" for="brief_owner_email">E-mail:*</label>
-                <input class="form-input__field" id="brief_owner_email" type="email" name="brief_owner_email" placeholder="kuklachev@gmail.com" required>
-              </div>
-              <div class="form__field form-input form-input--type_phone">
-                <label class="form-input__label" for="brief_owner_phone">Телефон:*</label>
-                <input class="form-input__field" id="brief_owner_phone" type="tel" name="brief_owner_phone" placeholder="8 (960) 900-60-90" required>
-              </div>
-            </fieldset>
-            <div class="form__fieldset form-fieldset form-textarea">
-              <label class="form-fieldset__legend" for="brief_comment">Комментарий</label>
-              <textarea class="form-textarea__field" id="brief_comment" name="brief_comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-            <fieldset class="form__fieldset form-fieldset">
-              <legend class="form-fieldset__legend">Дополнительно</legend>
-              <div class="form__field form-checkbox">
-                <input class="form-checkbox__input" id="brief_additional_shugar_substitute" type="checkbox" name="brief_additional" value="shugar_substitute" checked>
-                <label class="form-checkbox__label" for="brief_additional_shugar_substitute">Сахарозаменитель</label>
-              </div>
-              <div class="form__field form-checkbox">
-                <input class="form-checkbox__input" id="brief_additional_milk" type="checkbox" name="brief_additional" value="milk">
-                <label class="form-checkbox__label" for="brief_additional_milk">Молоко</label>
-              </div>
-              <div class="form__field form-checkbox">
-                <input class="form-checkbox__input" id="brief_additional_water" type="checkbox" name="brief_additional" value="water">
-                <label class="form-checkbox__label" for="brief_additional_water">Вода</label>
-              </div>
-              <div class="form__field form-checkbox">
-                <input class="form-checkbox__input" id="brief_additional_vitamins" type="checkbox" name="brief_additional" value="vitamins">
-                <label class="form-checkbox__label" for="brief_additional_vitamins">Витамины</label>
-              </div>
-            </fieldset>
-            <button class="form__submit button button--size_wide" type="submit">Отправить заявку</button>
-          </form>
-          <p class="brief__notice">* — Обязательные поля</p>
-        </div>
-      </section>
-      <section class="contact">
-        <div class="contact__container page__centerer">
-          <div class="contact__content contact__content--inner">
-            <h2 class="contact__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <div class="contact__address">
-              <p class="contact__place">ул. Большая Конюшенная, д. 19/8</p>
-              <p class="contact__city">Санкт-Петербург</p>
-            </div>
+<main class="page__main">
+  <div class="page__centerer page-title">
+    <h1 class="page-title__header">Подбор программы</h1>
+    <p class="page-title__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+  </div>
+  <section class="brief">
+    <div class="page__centerer">
+      <h2 class="page__hidden">Анкета</h2>
+      <form class="brief__form form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="form__fieldset form-fieldset">
+          <legend class="page__hidden">Расскажите о своём коте</legend>
+          <div class="form__field form-input">
+            <label class="form-input__label" for="brief_cat_name">Имя:*</label>
+            <input class="form-input__field" id="brief_cat_name" type="text" name="brief_cat_name" placeholder="Барсик" required>
           </div>
-          <div class="contact__map"></div>
+          <div class="form__field form-input">
+            <label class="form-input__label" for="brief_cat_weight">Вес (кг):*</label>
+            <input class="form-input__field" id="brief_cat_weight" type="number" name="brief_cat_weight" placeholder="7" required>
+          </div>
+          <div class="form__field form-input">
+            <label class="form-input__label" for="brief_cat_age">Возраст (лет):</label>
+            <input class="form-input__field" id="brief_cat_age" type="number" name="brief_cat_age" placeholder="7">
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form-fieldset">
+          <legend class="page__hidden">Тип программы</legend>
+          <div class="form__field form-radio">
+            <input class="form-radio__input" id="brief_type_slim" type="radio" name="brief_type" value="slim" checked>
+            <label class="form-radio__label" for="brief_type_slim">Похудение</label>
+          </div>
+          <div class="form__field form-radio">
+            <input class="form-radio__input" id="brief_type_weight" type="radio" name="brief_type" value="weight">
+            <label class="form-radio__label" for="brief_type_weight">Набор массы</label>
+          </div>
+          <div class="form__field form-radio">
+            <input class="form-radio__input" id="brief_type_advice" type="radio" name="brief_type" value="advice">
+            <label class="form-radio__label" for="brief_type_advice">Не знаю (нужен ваш совет)</label>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form-fieldset">
+          <legend class="form-fieldset__legend">Контактные данные (владельца кота)</legend>
+          <div class="form__field form-input form-input--type_email">
+            <label class="form-input__label" for="brief_owner_email">E-mail:*</label>
+            <input class="form-input__field" id="brief_owner_email" type="email" name="brief_owner_email" placeholder="kuklachev@gmail.com" required>
+          </div>
+          <div class="form__field form-input form-input--type_phone">
+            <label class="form-input__label" for="brief_owner_phone">Телефон:*</label>
+            <input class="form-input__field" id="brief_owner_phone" type="tel" name="brief_owner_phone" placeholder="8 (960) 900-60-90" required>
+          </div>
+        </fieldset>
+        <div class="form__fieldset form-fieldset form-textarea">
+          <label class="form-fieldset__legend" for="brief_comment">Комментарий</label>
+          <textarea class="form-textarea__field" id="brief_comment" name="brief_comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
-      </section>
-    </main>
+        <fieldset class="form__fieldset form-fieldset">
+          <legend class="form-fieldset__legend">Дополнительно</legend>
+          <div class="form__field form-checkbox">
+            <input class="form-checkbox__input" id="brief_additional_shugar_substitute" type="checkbox" name="brief_additional" value="shugar_substitute" checked>
+            <label class="form-checkbox__label" for="brief_additional_shugar_substitute">Сахарозаменитель</label>
+          </div>
+          <div class="form__field form-checkbox">
+            <input class="form-checkbox__input" id="brief_additional_milk" type="checkbox" name="brief_additional" value="milk">
+            <label class="form-checkbox__label" for="brief_additional_milk">Молоко</label>
+          </div>
+          <div class="form__field form-checkbox">
+            <input class="form-checkbox__input" id="brief_additional_water" type="checkbox" name="brief_additional" value="water">
+            <label class="form-checkbox__label" for="brief_additional_water">Вода</label>
+          </div>
+          <div class="form__field form-checkbox">
+            <input class="form-checkbox__input" id="brief_additional_vitamins" type="checkbox" name="brief_additional" value="vitamins">
+            <label class="form-checkbox__label" for="brief_additional_vitamins">Витамины</label>
+          </div>
+        </fieldset>
+        <button class="form__submit button button--size_wide" type="submit">Отправить заявку</button>
+      </form>
+      <p class="brief__notice">* — Обязательные поля</p>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="contact__container page__centerer">
+      <div class="contact__content contact__content--inner">
+        <h2 class="contact__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <div class="contact__address">
+          <p class="contact__place">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="contact__city">Санкт-Петербург</p>
+        </div>
+      </div>
+      <div class="contact__map"></div>
+    </div>
+  </section>
+</main>
 
-  {% include "footer.njk" %}
-  </body>
-</html>
+{% endblock %}
