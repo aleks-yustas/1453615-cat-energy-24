@@ -1,33 +1,131 @@
 .banner {
-  background-color: var(--bg-color-main);
-}
+  margin-bottom: 20px;
 
-.banner__container {
+  background-color: var(--bg-color-main);
   background-image:
     url("../../img/bg-index-banner.jpg"),
     linear-gradient(to bottom, var(--bg-color-accent) 0, var(--bg-color-accent) 302px, transparent 302px, transparent 100%);
   background-position: center top, center top;
   background-size: auto, 100% 100%;
   background-repeat: no-repeat;
+
+  @media (--not-narrow-vp) {
+    margin-bottom: 0;
+
+    background: none;
+  }
+
+  @media (--wide-vp) {
+    margin-bottom: 82px;
+  }
+}
+
+.banner__container {
+  position: relative;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (--not-narrow-vp) {
+    align-items: flex-start;
+    background-image: none;
+  }
+
+  @media (--wide-vp) {
+    padding-top: 32px;
+    padding-bottom: 54px;
+  }
 }
 
 .banner__content {
+  padding-top: 27px;
+
   font-family: var(--accent-font);
   font-weight: 400;
   text-align: center;
   color: var(--text-color-contrast);
+
+  @media (--not-narrow-vp) {
+    width: 420px;
+
+    text-align: left;
+    color: var(--text-color-accent);
+  }
+
+  @media (--wide-vp) {
+    margin-left: 80px;
+    padding-top: 111px;
+  }
 }
 
 .banner__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+
   font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
   color: inherit;
+
+  @media (--not-narrow-vp) {
+    margin-bottom: 41px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .banner__text {
+  margin-bottom: 29px;
+
   font-weight: inherit;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (--not-narrow-vp) {
+    margin-bottom: 49px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (--narrow-vp) {
+    margin-bottom: 3px;
+  }
+
+  @media (--middle-vp) {
+    z-index: -1;
+
+    order: 1;
+    align-self: center;
+    margin-top: -83px;
+  }
+
+  @media (--wide-vp) {
+    position: absolute;
+    top: 29px;
+    right: 220px;
+  }
+}
+
+.banner__link {
+  width: 100%;
+
+  @media (--not-narrow-vp) {
+    width: 244px;
+  }
+
+  @media (--wide-vp) {
+    margin-left: 80px;
+    margin-bottom: 185px;
+  }
 }

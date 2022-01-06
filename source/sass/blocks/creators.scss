@@ -1,4 +1,26 @@
 .creators {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 22px 0;
+
   color: var(--text-color-main);
   text-decoration: none;
+
+  @media (--not-narrow-vp) {
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 27px;
+    height: 34px;
+    margin-left: 22px;
+
+    background-color: var(--bg-color-accent);
+  }
 }

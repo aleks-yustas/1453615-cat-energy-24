@@ -1,5 +1,22 @@
 .compare__images {
+  position: relative;
+
+  margin: 0;
   padding: 0;
+
+  @media (--not-narrow-vp) {
+    width: 592px;
+    height: 511px;
+  }
+}
+
+.compare__image--after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .compare__image img {

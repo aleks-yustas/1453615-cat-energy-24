@@ -4,32 +4,51 @@
   padding: 15px;
   padding-bottom: 18px;
   border: 1px solid var(--border-color-darken);
+  border-radius: 4px;
+}
 
-  .result-metric__name {
-    position: absolute;
-    top: 100%;
-    left: 50%;
+.result-metric__name--bordered {
+  position: absolute;
+  top: 100%;
+  left: 50%;
 
-    width: 87px;
-    padding: 0 10px;
+  min-width: 87px;
+  padding: 0 10px;
 
-    font-size: 12px;
-    line-height: 12px;
-    text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
 
-    background-color: var(--bg-color-dark);
-    transform: translate(-50%, -10px);
+  background-color: var(--bg-color-dark);
+  transform: translate(-50%, -50%);
+
+  @media (--not-narrow-vp) {
+    min-width: 142px;
+    padding: 0 6px;
+
+    font-size: 14px;
+    line-height: 14px;
   }
 
-  .result-metric__count {
-    margin: 0;
+  @media (--middle-vp) {
+    background-color: var(--bg-color-main);
+  }
+}
 
-    font-family: var(--accent-font);
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: var(--text-color-accent);
+.result-metric__count--bordered {
+  margin: 0;
+
+  font-family: var(--accent-font);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--text-color-accent);
+
+  @media (--not-narrow-vp) {
+    font-size: 30px;
+    line-height: 37px;
   }
 }
 
@@ -42,18 +61,41 @@
   text-transform: uppercase;
   color: var(--text-color-accent);
 
-  .result-metric__name {
-    display: inline-block;
-
-    &::after {
-      content: ":";
-
-      display: inline-block;
-    }
+  @media (--not-narrow-vp) {
+    font-size: 20px;
   }
 
-  .result-metric__count {
-    display: inline-block;
-    margin: 0;
+  @media (--middle-vp) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
   }
+
+  @media (--wide-vp) {
+    text-align: left;
+  }
+}
+
+.result-metric__name--texted {
+  display: inline-block;
+
+  @media (--middle-vp) {
+    margin-bottom: 9px;
+  }
+
+  @media (--wide-vp) {
+    margin-right: 63px;
+  }
+
+  &::after {
+    content: ":";
+
+    display: inline-block;
+  }
+}
+
+.result-metric__count--texted {
+  display: inline-block;
+  margin: 0;
 }

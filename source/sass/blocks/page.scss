@@ -7,9 +7,16 @@
 
   word-wrap: break-word;
   overflow-wrap: break-word;
+
+  @media (--not-narrow-vp) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .page__body {
+  --scrollbar: calc(100vw - 100%);
+
   margin: 0;
 }
 
@@ -18,9 +25,23 @@
 }
 
 .page__centerer {
-  width: 320px;
-  margin: auto;
-  padding: 0 20px;
+  --content-indent: calc(20px + (10vw - 32px) / 4.48);
+
+  margin-inline: var(--content-indent) calc(var(--content-indent) - var(--scrollbar));
+
+  @media (--narrow-vp) {
+    --content-indent: calc(20px + (10vw - 32px) / 4.48);
+  }
+
+  @media (--middle-vp) {
+    --content-indent: 30px;
+  }
+
+  @media (--wide-vp) {
+    margin: 0 auto;
+
+    width: 1220px;
+  }
 }
 
 .page__hidden {
