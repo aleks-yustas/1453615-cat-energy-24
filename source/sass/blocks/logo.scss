@@ -14,7 +14,14 @@
   @media (--not-narrow-vp) {
     flex-grow: 0;
     flex-shrink: 0;
+    width: 174px;
+    height: 52px;
     padding: 0;
+  }
+
+  @media (--wide-vp) {
+    width: 202px;
+    height: 60px;
   }
 
   &--footer {

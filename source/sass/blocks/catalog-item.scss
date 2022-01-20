@@ -1,16 +1,87 @@
 .catalog-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0 25px;
+
+  @media (--not-narrow-vp) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 39px 39px;
+
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 81px, var(--bg-color-darken) 81px, var(--bg-color-darken) 100%);
+  }
+
+  @media (--wide-vp) {
+    padding: 0 38px 40px 38px;
+  }
+
+  &::before {
+    @media (--narrow-vp) {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      display: block;
+      height: 1px;
+
+      background-color: var(--border-color-light);
+      box-shadow: 30px 0 0 0 var(--border-color-light), -30px 0 0 0 var(--border-color-light);
+    }
+  }
 }
 
 .catalog-item__title {
+  margin-bottom: 18px;
+
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: var(--text-color-dark);
+  text-align: left;
+
+  @media (--not-narrow-vp) {
+    margin-bottom: 21px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (--wide-vp) {
+    line-height: 21px;
+  }
+}
+
+.catalog-item__image {
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 140px;
+  width: 100%;
+
+  background-color: var(--bg-color-accent);
+
+  @media (--not-narrow-vp) {
+    order: -1;
+    width: 168px;
+    height: 200px;
+    margin-bottom: 34px;
+  }
+
+  @media (--wide-vp) {
+    width: 172px;
+    height: 196px;
+    margin-bottom: 46px;
+  }
 }
 
 .catalog-item__link {
@@ -25,13 +96,35 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  margin-bottom: 6px;
 
   font-size: 12px;
   line-height: 14px;
 
+  @media (--not-narrow-vp) {
+    position: relative;
+
+    margin-bottom: 14px;
+  }
+
   &::before {
     margin-right: auto;
     vertical-align: middle;
+  }
+
+  &::after {
+    @media (--not-narrow-vp) {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background-color: var(--border-color-darken);
+    }
   }
 }
 
@@ -48,5 +141,11 @@
 }
 
 .catalog-item__order {
+  grid-column: 1 / -1;
   width: 100%;
+  margin-top: 13px;
+
+  @media (--not-narrow-vp) {
+    margin-top: 33px;
+  }
 }

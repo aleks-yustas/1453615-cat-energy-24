@@ -2,6 +2,19 @@
   width: 100%;
 }
 
-.catalog-list__item {
-  margin-bottom: 40px;
+.catalog-list__body {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (--not-narrow-vp) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+
+  @media (--wide-vp) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
 }

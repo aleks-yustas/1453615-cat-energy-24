@@ -5,38 +5,40 @@
 {% block page__main %}
 
 <main class="page__main">
-  <div class="page__centerer page-title">
+  <div class="page__centerer page__title page-title">
     <h1 class="page-title__header">Каталог продукции</h1>
   </div>
-  <section class="catalog">
+  <section class="page__catalog catalog">
     <div class="page__centerer">
       <h2 class="page__hidden">Основные товары</h2>
       <table class="catalog__list catalog-list">
-        <tr class="page__hidden">
-          <th scope="col">Название товара</th>
-          <th scope="col">Изображение товара</th>
-          <th scope="col">Масса</th>
-          <th scope="col">Вкус</th>
-          <th scope="col">Цена</th>
-          <th scope="col">Заказ</th>
-        </tr>
+        <tbody class="catalog-list__body">
+          <tr class="page__hidden">
+            <th scope="col">Название товара</th>
+            <th scope="col">Изображение товара</th>
+            <th scope="col">Масса</th>
+            <th scope="col">Вкус</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Заказ</th>
+          </tr>
 
-        {% for catalogItem in catalogItems %}
-          {% include "./templates/catalog-item.twig" %}
-        {% endfor %}
+          {% for catalogItem in catalogItems %}
+            {% include "./templates/catalog-item.twig" %}
+          {% endfor %}
 
-        <tr class="catalog-list__item catalog-all">
-          <td colspan="6">
-            <p class="catalog-all__title">Показать еще 100500 товаров</p>
-            <p class="catalog-all__text">На самом деле вкусов гораздо больше!</p>
-            <a class="button button--size_wide button--color_gray" href="#">Показать все</a>
-          </td>
-        </tr>
+          <tr class="catalog-list__item catalog-all">
+            <td class="catalog-all__content" colspan="6">
+              <p class="catalog-all__title">Показать еще 100500 товаров</p>
+              <p class="catalog-all__text">На самом деле вкусов гораздо больше!</p>
+              <a class="catalog-all__button button button--size_wide button--color_gray" href="#">Показать все</a>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </section>
-  <section class="additional">
-    <div class="page__centerer">
+  <section class="page__additional additional">
+    <div class="additional__container page__centerer">
       <h2 class="additional__title section-title">Дополнительные товары</h2>
       <table class="additional__list">
         <tr class="page__hidden">
@@ -45,54 +47,20 @@
           <th scope="col">Цена</th>
           <th scope="col">Заказ</th>
         </tr>
-        <tr class="additional__item additional-item">
-          <th class="additional-item__title" scope="row">Сахарозаменитьель</th>
-          <td class="additional-item__count">1 упаковка (100 г)</td>
-          <td class="additional-item__price">200 р.</td>
-          <td class="additional-item__order">
-            <a class="additional-item__button button button--size_wide" href="#">Заказать</a>
-          </td>
-        </tr>
-        <tr class="additional__item additional-item">
-          <th class="additional-item__title" scope="row">Питьевая вода</th>
-          <td class="additional-item__count">5 литров</td>
-          <td class="additional-item__price">50 р.</td>
-          <td class="additional-item__order">
-            <a class="additional-item__button button button--size_wide" href="#">Заказать</a>
-          </td>
-        </tr>
-        <tr class="additional__item additional-item">
-          <th class="additional-item__title" scope="row">Молоко</th>
-          <td class="additional-item__count">1 литр</td>
-          <td class="additional-item__price">100 р.</td>
-          <td class="additional-item__order">
-            <a class="additional-item__button button button--size_wide" href="#">Заказать</a>
-          </td>
-        </tr>
-        <tr class="additional__item additional-item">
-          <th class="additional-item__title" scope="row">Витамины</th>
-          <td class="additional-item__count">1 упаковка (30 г)</td>
-          <td class="additional-item__price">300 р.</td>
-          <td class="additional-item__order">
-            <a class="additional-item__button button button--size_wide" href="#">Заказать</a>
-          </td>
-        </tr>
+
+        {% for additionalItem in additionalItems %}
+          {% include "./templates/additional-item.twig" %}
+        {% endfor %}
+
       </table>
-      <a href="#" class="additional__order-all">Закажите все и получите чехол для кота в подарок</a>
+      <a href="#" class="additional__order-all additional-all">
+        <span class="additional-all__text">Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!</span>
+      </a>
     </div>
   </section>
-  <section class="contact">
-    <div class="contact__container page__centerer">
-      <div class="contact__content contact__content--inner">
-        <h2 class="contact__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <div class="contact__address">
-          <p class="contact__place">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="contact__city">Санкт-Петербург</p>
-        </div>
-      </div>
-      <div class="contact__map"></div>
-    </div>
-  </section>
+
+  {% include "./templates/contact.twig" %}
+
 </main>
 
 {% endblock %}

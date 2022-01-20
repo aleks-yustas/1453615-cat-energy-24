@@ -1,15 +1,5 @@
 .modules {
-  margin-bottom: 20px;
-
   background-color: var(--bg-color-main);
-
-  @media (--not-narrow-vp) {
-    margin-bottom: 45px;
-  }
-
-  @media (--wide-vp) {
-    margin-bottom: 82px;
-  }
 }
 
 .modules__container {

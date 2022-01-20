@@ -2,9 +2,9 @@
   border-bottom: 1px solid var(--border-color);
   font-family: var(--accent-font);
 
-  background-color: var(--bg-color-main);
-
   @media (--not-narrow-vp) {
+    padding: 0;
+
     background: none;
   }
 }
@@ -86,10 +86,14 @@
 
       display: block;
       height: 1px;
+
       background-color: var(--border-color-light);
+      box-shadow: 30px 0 0 0 var(--border-color-light), -30px 0 0 0 var(--border-color-light);
     }
   }
+}
 
+.main-nav--index .main-nav__link {
   @media (--wide-vp) {
     color: var(--text-color-contrast);
 

@@ -5,15 +5,15 @@
 {% block page__main %}
 
 <main class="page__main">
-  <div class="page__centerer page-title">
+  <div class="page__centerer page__title page__title--form page-title">
     <h1 class="page-title__header">Подбор программы</h1>
     <p class="page-title__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
   </div>
-  <section class="brief">
+  <section class="page__brief brief">
     <div class="page__centerer">
       <h2 class="page__hidden">Анкета</h2>
       <form class="brief__form form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__fieldset form-fieldset">
+        <fieldset class="form__fieldset form__fieldset--text-inputs form-fieldset form-fieldset--text-inputs">
           <legend class="page__hidden">Расскажите о своём коте</legend>
           <div class="form__field form-input">
             <label class="form-input__label" for="brief_cat_name">Имя:*</label>
@@ -28,7 +28,7 @@
             <input class="form-input__field" id="brief_cat_age" type="number" name="brief_cat_age" placeholder="7">
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form-fieldset">
+        <fieldset class="form__fieldset form__fieldset--radio form-fieldset form-fieldset--radio">
           <legend class="page__hidden">Тип программы</legend>
           <div class="form__field form-radio">
             <input class="form-radio__input" id="brief_type_slim" type="radio" name="brief_type" value="slim" checked>
@@ -43,8 +43,8 @@
             <label class="form-radio__label" for="brief_type_advice">Не знаю (нужен ваш совет)</label>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form-fieldset">
-          <legend class="form-fieldset__legend">Контактные данные (владельца кота)</legend>
+        <fieldset class="form__fieldset form__fieldset--feedback form-fieldset form-fieldset--text-inputs form-fieldset--feedback">
+          <legend class="form-fieldset__legend section-title">Контактные данные (владельца кота)</legend>
           <div class="form__field form-input form-input--type_email">
             <label class="form-input__label" for="brief_owner_email">E-mail:*</label>
             <input class="form-input__field" id="brief_owner_email" type="email" name="brief_owner_email" placeholder="kuklachev@gmail.com" required>
@@ -54,12 +54,12 @@
             <input class="form-input__field" id="brief_owner_phone" type="tel" name="brief_owner_phone" placeholder="8 (960) 900-60-90" required>
           </div>
         </fieldset>
-        <div class="form__fieldset form-fieldset form-textarea">
-          <label class="form-fieldset__legend" for="brief_comment">Комментарий</label>
+        <div class="form__fieldset form__fieldset--comment form-fieldset form-textarea">
+          <label class="form-fieldset__legend section-title" for="brief_comment">Комментарий</label>
           <textarea class="form-textarea__field" id="brief_comment" name="brief_comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
-        <fieldset class="form__fieldset form-fieldset">
-          <legend class="form-fieldset__legend">Дополнительно</legend>
+        <fieldset class="form__fieldset form__fieldset--checkbox form-fieldset form-fieldset--checkbox">
+          <legend class="form-fieldset__legend section-title">Дополнительно</legend>
           <div class="form__field form-checkbox">
             <input class="form-checkbox__input" id="brief_additional_shugar_substitute" type="checkbox" name="brief_additional" value="shugar_substitute" checked>
             <label class="form-checkbox__label" for="brief_additional_shugar_substitute">Сахарозаменитель</label>
@@ -77,23 +77,16 @@
             <label class="form-checkbox__label" for="brief_additional_vitamins">Витамины</label>
           </div>
         </fieldset>
-        <button class="form__submit button button--size_wide" type="submit">Отправить заявку</button>
-      </form>
-      <p class="brief__notice">* — Обязательные поля</p>
-    </div>
-  </section>
-  <section class="contact">
-    <div class="contact__container page__centerer">
-      <div class="contact__content contact__content--inner">
-        <h2 class="contact__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <div class="contact__address">
-          <p class="contact__place">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="contact__city">Санкт-Петербург</p>
+        <div class="form__action">
+          <button class="form__submit button button--size_wide" type="submit">Отправить заявку</button>
+          <p class="form__notice">* — Обязательные поля</p>
         </div>
-      </div>
-      <div class="contact__map"></div>
+      </form>
     </div>
   </section>
+
+  {% include "./templates/contact.twig" %}
+
 </main>
 
 {% endblock %}

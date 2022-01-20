@@ -5,7 +5,20 @@
 {% block page__main %}
 
 <main class="page__main">
-  <section class="modules">
+<h1 class="page__hidden">«Кэт энерджи» — интернет-магазин, который поможет подобрать и заказать питание для вашего кота.</h1>
+  <section class="page__banner banner">
+    <div class="banner__container page__centerer">
+      <div class="banner__content">
+        <h2 class="banner__title section-title">Функциональное питание для&nbsp;котов</h2>
+        <p class="banner__text">Занялся собой? Займись котом!</p>
+      </div>
+      <div class="banner__image">
+        <img src="img/banner-image.png" width="280" height="270" alt="«Кэт енерджи ПРО» с курицей.">
+      </div>
+      <a class="banner__link button button--size_wide" href="#">Подобрать программу</a>
+    </div>
+  </section>
+  <section class="page__modules modules">
     <div class="modules__container page__centerer">
       <h2 class="page__hidden">Виды программ</h2>
       <div class="modules__item module-card">
@@ -81,18 +94,9 @@
       </div>
     </div>
   </section>
-  <section class="contact">
-    <div class="contact__container page__centerer">
-      <div class="contact__content">
-        <h2 class="contact__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-        <div class="contact__address">
-          <p class="contact__place">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</p>
-          <p class="contact__city">Санкт-Петербург</p>
-        </div>
-      </div>
-    </div>
-    <div class="contact__map"></div>
-  </section>
+
+  {% include "./templates/contact.twig" %}
+
 </main>
 
 {% endblock %}

@@ -1,6 +1,12 @@
 .page-title {
+  padding-top: 27px;
+
   font-family: var(--accent-font);
   color: var(--text-color-accent);
+
+  @media (--not-narrow-vp) {
+    padding-top: 0;
+  }
 }
 
 .page-title__header {
@@ -10,6 +16,11 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (--not-narrow-vp) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .page-title__text {
@@ -20,8 +31,19 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (--not-narrow-vp) {
+    max-width: 330px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .page-title__header + .page-title__text {
   margin-top: 37px;
+
+  @media (--not-narrow-vp) {
+    margin-top: 55px;
+  }
 }

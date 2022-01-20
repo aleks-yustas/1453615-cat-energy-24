@@ -1,23 +1,53 @@
+.additional__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 35px;
+
+  @media (--not-narrow-vp) {
+    row-gap: 69px;
+  }
+
+  @media (--wide-vp) {
+    grid-template-columns: 1fr 245px;
+    column-gap: 79px;
+    row-gap: 80px;
+  }
+}
+
+.additional__title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (--not-narrow-vp) {
+    margin-bottom: 11px;
+  }
+
+  @media (--wide-vp) {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  &::after {
+    --title-decoration-color: var(--bg-color-accent);
+
+    content: "";
+
+    flex-grow: 1;
+    display: block;
+    height: 2px;
+    margin-left: 22px;
+
+    background-color: var(--title-decoration-color);
+    box-shadow: 30px 0 0 0 var(--title-decoration-color);
+  }
+}
+
 .additional__list {
   width: 100%;
   border: none;
   border-collapse: collapse;
-}
-
-.additional__order-all {
-  display: block;
-  min-height: 290px;
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--text-color-contrast);
-  text-align: center;
-  text-decoration: none;
-
-  background-color: var(--bg-color-accent);
-  background-image: url("../../img/bg-order-mobile.jpg");
-  background-size: auto;
-  background-position: center top;
-  background-repeat: no-repeat;
 }

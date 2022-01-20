@@ -1,0 +1,51 @@
+.additional-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 290px;
+  padding: 59px 60px 43px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color-contrast);
+  text-decoration: none;
+
+  background-color: var(--bg-color-accent);
+  background-image: url("../../img/bg-order-mobile.jpg");
+  background-size: auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @media (--not-narrow-vp) {
+    flex-direction: row;
+    min-height: 200px;
+    padding: 57px 124px 60px 77px;
+  }
+
+  @media (--wide-vp) {
+    flex-direction: column;
+    padding: 55px 40px 40px;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 80px;
+    height: 80px;
+
+    background-color: var(--bg-color-main);
+  }
+}
+
+.additional-all__text {
+  max-width: 165px;
+
+  text-align: center;
+
+  @media (--narrow-vp) {
+    text-align: left;
+  }
+}

@@ -1,12 +1,54 @@
 .form-fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0;
   border: none;
+
+  &--text-inputs {
+    row-gap: 14px;
+
+    @media (--not-narrow-vp) {
+      row-gap: 20px;
+    }
+  }
+
+  &--radio {
+    row-gap: 13px;
+  }
+
+  &--feedback {
+    @media (--wide-vp) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 78px;
+    }
+  }
+
+  &--checkbox {
+    row-gap: 13px;
+
+    @media (--not-narrow-vp) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 60px;
+      row-gap: 32px;
+    }
+
+    @media (--wide-vp) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 80px;
+    }
+  }
 }
 
 .form-fieldset__legend {
+  margin-bottom: 35px;
+
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: var(--text-color-accent);
+
+  @media (--not-narrow-vp) {
+    margin-bottom: 76px;
+  }
 }
