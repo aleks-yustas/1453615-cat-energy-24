@@ -20,6 +20,12 @@
   }
 }
 
+.module-card__content {
+  @media (--narrow-vp) {
+    border-bottom: 1px solid var(--border-color-dark);
+  }
+}
+
 .module-card__title {
   display: flex;
   justify-content: flex-start;
@@ -92,9 +98,10 @@
 }
 
 .module-card__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  width: 100%;
   padding: 15px 0 18px;
-  border-top: 1px solid var(--border-color-dark);
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -103,6 +110,21 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-color-accent);
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 32px;
+    height: 10px;
+    margin-left: 15px;
+
+    background-color: var(--bg-color-accent);
+  }
 
   @media (--not-narrow-vp) {
     margin-top: auto;

@@ -16,7 +16,7 @@
     line-height: 36px;
   }
 
-  &::after {
+  &--decoration::after {
     --title-decoration-color: var(--bg-color-accent);
 
     content: "";

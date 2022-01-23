@@ -24,4 +24,13 @@
     color: var(--text-color-main);
     background-color: var(--bg-color-darken);
   }
+
+  &--size_big {
+    @media (--wide-vp) {
+      height: 54px;
+      padding: 17px 20px;
+
+      font-size: 20px;
+    }
+  }
 }

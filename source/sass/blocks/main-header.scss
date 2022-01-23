@@ -7,9 +7,16 @@
   @media (--wide-vp) {
     padding-bottom: 64px;
   }
+
+  @media (--wide-vp) {
+    padding-top: 53px;
+    padding-bottom: 29px;
+  }
 }
 
 .main-header__container {
+  position: relative;
+
   @media (--not-narrow-vp) {
     display: flex;
     align-items: center;

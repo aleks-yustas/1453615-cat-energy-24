@@ -13,7 +13,9 @@
       main-nav--index
     {% endif %}
     ">
-      <button class="main-nav__toggler" type="button" hidden>Открыть меню</button>
+      <button class="main-nav__toggler" type="button" hidden>
+        <span class="page__hidden">Открыть меню</span>
+      </button>
       <ul class="main-nav__list">
         {% for page in pages %}
           <li class="main-nav__item">
