@@ -56,6 +56,13 @@
     @media (--wide-vp) {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 78px;
+      row-gap: 0;
+    }
+
+    .form-fieldset__legend {
+      @media (--middle-vp) {
+        margin-bottom: 56px;
+      }
     }
   }
 
@@ -71,11 +78,20 @@
     @media (--wide-vp) {
       grid-template-columns: repeat(4, 1fr);
       column-gap: 80px;
+      row-gap: 0;
+    }
+
+    .form-fieldset__legend {
+      @media (--not-narrow-vp) {
+        margin-bottom: 57px;
+      }
     }
   }
 }
 
 .form-fieldset__legend {
+  grid-column: 1 / -1;
+  width: 100%;
   margin-bottom: 35px;
   padding: 0;
 
