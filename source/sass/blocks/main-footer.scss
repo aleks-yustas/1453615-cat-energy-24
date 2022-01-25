@@ -10,6 +10,7 @@
   @media (--not-narrow-vp) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-content: center;
     column-gap: 20px;
     padding: 53px 0;
   }

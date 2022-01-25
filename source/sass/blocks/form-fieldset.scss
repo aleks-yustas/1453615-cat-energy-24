@@ -14,6 +14,42 @@
 
   &--radio {
     row-gap: 13px;
+    padding: 20px 0;
+
+    @media (--narrow-vp) {
+      position: relative;
+
+      &::before,
+      &::after {
+        --fieldset-border-color: var(--border-color-dark);
+
+        content: "";
+
+        position: absolute;
+        right: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 1px;
+
+        background-color: var(--fieldset-border-color);
+        box-shadow: 30px 0 0 0 var(--fieldset-border-color), -30px 0 0 0 var(--fieldset-border-color);
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    @media (--not-narrow-vp) {
+      padding: 25px 28px;
+      border: 1px solid var(--border-color-lighten);
+    }
   }
 
   &--feedback {
@@ -41,12 +77,7 @@
 
 .form-fieldset__legend {
   margin-bottom: 35px;
-
-  font-family: var(--accent-font);
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: var(--text-color-accent);
+  padding: 0;
 
   @media (--not-narrow-vp) {
     margin-bottom: 76px;

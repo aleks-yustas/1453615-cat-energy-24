@@ -1,13 +1,12 @@
 .section-title {
-  display: flex;
-  align-items: center;
   width: 100%;
   margin: 0;
+  padding: 0;
 
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 26px;
 
   color: var(--text-color-accent);
 
@@ -15,22 +14,37 @@
     font-size: 36px;
     line-height: 36px;
   }
+}
 
-  &--decoration::after {
-    --title-decoration-color: var(--bg-color-accent);
+.section-title__text {
+  display: inline;
+  width: fit-content;
 
-    content: "";
+  &--decoration {
+    --air-gap: 22px;
+    --top-offset: 15px;
+    --line-color: var(--bg-color-accent);
 
-    flex-grow: 1;
-    display: block;
-    height: 2px;
-    margin-left: 22px;
+    position: relative;
 
-    background-color: var(--title-decoration-color);
-    box-shadow: 30px 0 0 0 var(--title-decoration-color);
+    @media (--not-narrow-vp) {
+      --top-offset: 22px;
+    }
 
-    @media (--wide-vp) {
-      box-shadow: 30vw 0 0 0 var(--title-decoration-color);
+    &::before {
+
+      content: "";
+
+      position: absolute;
+      top: var(--top-offset);
+      right: calc(100% + var(--air-gap));
+
+      display: block;
+      width: calc(100vw - 100% - var(--air-gap));
+      height: 2px;
+
+      background-color: var(--line-color);
+      box-shadow: calc(100vw + var(--air-gap)) 0 0 0 var(--line-color);
     }
   }
 }

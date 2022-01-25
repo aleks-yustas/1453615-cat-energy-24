@@ -10,7 +10,8 @@
 }
 
 .page-title__header {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 37px;
 
   font-family: inherit;
   font-weight: 400;
@@ -18,13 +19,20 @@
   line-height: 36px;
 
   @media (--not-narrow-vp) {
+    margin-bottom: 54px;
+
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (--wide-vp) {
+    margin-bottom: 56px;
   }
 }
 
 .page-title__text {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 39px;
 
   font-family: inherit;
   font-weight: 400;
@@ -34,16 +42,9 @@
 
   @media (--not-narrow-vp) {
     max-width: 330px;
+    margin-bottom: 66px;
 
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-.page-title__header + .page-title__text {
-  margin-top: 37px;
-
-  @media (--not-narrow-vp) {
-    margin-top: 55px;
   }
 }

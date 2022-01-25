@@ -41,15 +41,21 @@
 }
 
 .page__title {
-  margin-bottom: 40px;
+  margin-bottom: 4px;
 
   @media (--not-narrow-vp) {
-    margin-bottom: 0;
+    margin-bottom: 28px;
   }
 
-  &--form {
+  &--subtitled {
+    margin-bottom: 2px;
+
     @media (--not-narrow-vp) {
-      margin-bottom: 66px;
+      margin-bottom: 0;
+    }
+
+    @media (--middle-vp) {
+      padding: 0 40px;
     }
   }
 }

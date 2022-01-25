@@ -9,6 +9,17 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (--not-narrow-vp) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+
+  &--type_email .form-input__field,
+  &--type_phone .form-input__field {
+    padding: 8px 20px;
+  }
 }
 
 .form-input__label {
@@ -24,6 +35,10 @@
   font: inherit;
 
   background-color: var(--bg-color-main);
+
+  @media (--not-narrow-vp) {
+    padding: 9px 20px;
+  }
 
   &::placeholder {
     color: inherit;

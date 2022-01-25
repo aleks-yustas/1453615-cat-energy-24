@@ -2,6 +2,12 @@
   background-color: var(--bg-color-main);
 }
 
+.brief__form {
+  @media (--middle-vp) {
+    padding: 0 40px;
+  }
+}
+
 .brief__notice {
   color: var(--text-color-accent);
   text-align: center;
