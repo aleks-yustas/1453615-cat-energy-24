@@ -1,6 +1,7 @@
 {% set pageId = 0 %}
 {% set permalink = pages[pageId].path %}
 {% extends "./templates/layout.twig" %}
+{%- import "./templates/picture.twig" as macros -%}
 
 {% block page__main %}
 
@@ -13,7 +14,19 @@
         <p class="banner__text">Занялся собой? Займись котом!</p>
       </div>
       <div class="banner__image">
-        <img src="img/banner-image.png" width="280" height="270" alt="«Кэт енерджи ПРО» с курицей.">
+
+        {{ macros.picture(
+          "banner__picture",
+          "img/",
+          "banner",
+          "png",
+          "«Кэт енерджи ПРО» с курицей.",
+          null,
+          null,
+          false,
+          true
+        ) }}
+
       </div>
       <a class="banner__link button button--size_wide button--size_big" href="#">Подобрать программу</a>
     </div>
@@ -83,12 +96,36 @@
           <figcaption class="page__hidden">Сравнение внешнего вида кота до и после похудения</figcaption>
           <div class="compare__image-container compare__image-container--before">
             <div class="compare__image compare__image--before">
-              <img src="img/cat-before-mobile.png" width="280" height="232" alt="Кот до похудения.">
+
+              {{ macros.picture(
+                "compare__img",
+                "img/",
+                "cat-fat",
+                "png",
+                "Кот до похудения.",
+                null,
+                null,
+                false,
+                true
+              ) }}
+
             </div>
           </div>
           <div class="compare__image-container compare__image-container--after">
             <div class="compare__image compare__image--after">
-              <img src="img/cat-after-mobile.png" width="280" height="232" alt="Кот после похудения.">
+
+              {{ macros.picture(
+                "compare__img",
+                "img/",
+                "cat-skinny",
+                "png",
+                "Кот после похудения.",
+                null,
+                null,
+                false,
+                true
+              ) }}
+
             </div>
           </div>
         </figure>

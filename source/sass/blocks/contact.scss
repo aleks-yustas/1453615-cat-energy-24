@@ -100,13 +100,23 @@
   height: 362px;
 
   background-color: var(--bg-color-accent);
-  background-image: url("../../img/bg-map-mobile.jpg");
-  background-position: center top;
-  background-size: contain;
+  background-image: url("../../img/map-s@1x.jpg");
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map-s@2x.jpg");
+  }
 
   @media (--not-narrow-vp) {
     height: 400px;
+
+    background-image: url("../../img/map-m@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-m@2x.jpg");
+    }
   }
 
   @media (--wide-vp) {
@@ -116,5 +126,11 @@
     bottom: 0;
     left: 0;
     z-index: -1;
+
+    background-image: url("../../img/map-l@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-l@2x.jpg");
+    }
   }
 }
