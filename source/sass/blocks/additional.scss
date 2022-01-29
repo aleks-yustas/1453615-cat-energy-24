@@ -31,4 +31,9 @@
   width: 100%;
   border: none;
   border-collapse: collapse;
+
+  @media (--middle-vp) {
+    border-right: 1px solid var(--border-color-darken);
+    border-left: 1px solid var(--border-color-darken);
+  }
 }
