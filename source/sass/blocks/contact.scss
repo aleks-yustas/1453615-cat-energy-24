@@ -1,13 +1,18 @@
 .contact {
   @media (--wide-vp) {
-    position: relative;
+    display: grid;
   }
 }
 
 .contact__container {
   @media (--wide-vp) {
+    z-index: 2;
+
+    grid-area: 1 / 1 / 2 / 2;
     height: 400px;
     padding-top: 95px;
+
+    pointer-events: none;
   }
 }
 
@@ -35,6 +40,8 @@
   @media (--wide-vp) {
     width: 565px;
     padding: 56px 80px;
+
+    pointer-events: initial;
   }
 
   &--inner {
@@ -111,12 +118,9 @@
   }
 
   @media (--wide-vp) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    z-index: 0;
+
+    grid-area: 1 / 1 / 2 / 2;
   }
 }
 
