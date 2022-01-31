@@ -11,7 +11,7 @@
     align-items: center;
     padding: 0 39px 39px;
 
-    background-image: linear-gradient(to bottom, transparent 0%, transparent 81px, var(--bg-color-darken) 81px, var(--bg-color-darken) 100%);
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 81px, var(--bg-color-lighten) 81px, var(--bg-color-lighten) 100%);
   }
 
   @media (--wide-vp) {

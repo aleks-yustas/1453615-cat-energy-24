@@ -46,7 +46,7 @@
 
   &--inner {
     @media (--not-wide-vp) {
-      --contact-bg-color: var(--bg-color-darken);
+      --contact-bg-color: var(--bg-color-lighten);
     }
   }
 }

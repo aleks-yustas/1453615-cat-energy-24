@@ -16,13 +16,33 @@
   background-color: var(--bg-color-accent);
   cursor: pointer;
 
+  &:hover {
+    background-color: var(--bg-color-accent-bright);
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+
+    background-color: var(--bg-color-accent-bright);
+  }
+
   &--size_wide {
     width: 100%;
   }
 
   &--color_gray {
     color: var(--text-color-main);
-    background-color: var(--bg-color-darken);
+    background-color: var(--bg-color-lighten);
+
+    &:hover {
+      background-color: var(--bg-color-light);
+    }
+
+    &:active {
+      color: rgba(#444444, 0.3);
+
+      background-color: var(--bg-color-light);
+    }
   }
 
   &--size_big {

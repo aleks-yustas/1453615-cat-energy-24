@@ -5,8 +5,15 @@
         aria-current="page"
       {% endif %}
     aria-label="Логотип «Кэт энерджи».">
-      <img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="">
-      <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="img/logo-cat-energy.svg#desktop">
+        <source media="(min-width: 768px)" srcset="img/logo-cat-energy.svg#tablet">
+        <img class="logo__image" src="img/logo-cat-energy.svg#mobile" width="34" height="38" alt="">
+      </picture>
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-cat-energy.svg#logo-text-main">
+        <img class="logo__text" src="img/logo-cat-energy.svg#logo-text-additional" width="101" height="18" alt="">
+      </picture>
     </a>
     <nav class="main-header__nav main-nav main-nav--no-js
     {% if pageId == 0 %}

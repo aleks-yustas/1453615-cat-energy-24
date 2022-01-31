@@ -17,17 +17,34 @@
 }
 
 .social__item {
-  margin: 15px;
+  margin: 10px;
 }
 
 .social__link {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
 
-  background-color: var(--bg-color-accent);
-}
+  background: var(--text-color-light);
+  mask: var(--social-icon) no-repeat center / cover;
 
-.social__icon {
-  fill: currentColor;
+  &:hover {
+    background: var(--bg-color-accent);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--vk {
+    --social-icon: url("../../icons/sprite.svg#vk");
+  }
+
+  &--insta {
+    --social-icon: url("../../icons/sprite.svg#instagram");
+  }
+
+  &--fb {
+    --social-icon: url("../../icons/sprite.svg#facebook");
+  }
 }

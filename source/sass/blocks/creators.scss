@@ -13,6 +13,14 @@
     padding: 0;
   }
 
+  &:hover::after {
+    background-color: var(--bg-color-accent);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     content: "";
 
@@ -21,6 +29,7 @@
     height: 34px;
     margin-left: 22px;
 
-    background-color: var(--bg-color-accent);
+    background-color: currentColor;
+    mask: url("../../icons/sprite.svg#logo-academy") no-repeat center / cover;
   }
 }

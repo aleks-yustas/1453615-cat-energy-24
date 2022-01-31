@@ -1,7 +1,8 @@
 .logo {
   flex-grow: 1;
-  display: grid;
-  grid-template-columns: 34px 1fr 34px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 0 16px;
 
@@ -13,10 +14,7 @@
 
   @media (--not-narrow-vp) {
     flex-grow: 0;
-    flex-shrink: 0;
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
     width: 174px;
     height: 52px;
     padding: 0;
@@ -39,14 +37,36 @@
       text-align: left;
     }
   }
-}
 
-.logo__image {
-  @media (--not-narrow-vp) {
-    margin-right: 12px;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::after {
+    @media (--narrow-vp) {
+      content: "";
+
+      width: 34px;
+    }
   }
 }
 
-.logo__text {
-  justify-self: center;
+.logo__image {
+  width: 34px;
+  height: 38px;
+
+  @media (--not-narrow-vp) {
+    width: 60px;
+    height: 50px;
+    margin-right: 12px;
+  }
+
+  @media (--wide-vp) {
+    width: 70px;
+    height: 60px;
+  }
 }

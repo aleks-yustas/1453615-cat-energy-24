@@ -1,4 +1,6 @@
 .form-input {
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -15,10 +17,9 @@
     line-height: 30px;
   }
 
-
   &--type_email .form-input__field,
   &--type_phone .form-input__field {
-    padding: 8px 20px;
+    padding: 8px 40px 8px 20px;
   }
 }
 
@@ -30,17 +31,62 @@
 .form-input__field {
   flex-grow: 1;
   padding: 14px;
-  border: 2px solid var(--border-color-lighten);
+  border: none;
 
   font: inherit;
 
   background-color: var(--bg-color-main);
+  box-shadow: inset 0 0 0 1px var(--border-color-lighten);
 
   @media (--not-narrow-vp) {
     padding: 9px 20px;
   }
 
+  &:hover {
+    box-shadow: inset 0 0 0 1px var(--border-color-darken);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px var(--border-color-black);
+    outline: none;
+
+    & + .form-input__icon {
+      background: var(--bg-color-accent);
+    }
+  }
+
   &::placeholder {
     color: inherit;
+  }
+
+  &--error {
+    box-shadow: inset 0 0 0 2px var(--border-color-alert);
+
+    & + .form-input__icon {
+      background: var(--border-color-alert);
+    }
+  }
+}
+
+.form-input__icon {
+  position: absolute;
+  top: 50%;
+  right: 17px;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-color: var(--text-color-dark);
+  mask: var(--input-icon) no-repeat center / cover;
+
+  transform: translateY(-50%);
+
+  &--email {
+    --input-icon: url("../../icons/sprite.svg#email");
+  }
+
+  &--phone {
+    --input-icon: url("../../icons/sprite.svg#phone");
   }
 }
