@@ -21,14 +21,11 @@
 }
 
 .social__link {
-  display: block;
+  display: grid;
   width: 30px;
   height: 30px;
 
-  background: var(--text-color-light);
-  mask: var(--social-icon) no-repeat center / cover;
-
-  &:hover {
+  &:hover::before {
     background: var(--bg-color-accent);
   }
 
@@ -36,15 +33,27 @@
     opacity: 0.3;
   }
 
-  &--vk {
+  &::before {
+    content: "";
+
+    grid-area: 1 / 1 / 2 / 2;
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background: var(--text-color-light);
+    mask: var(--social-icon) no-repeat center / cover;
+  }
+
+  &--vk::before {
     --social-icon: url("../../icons/sprite.svg#vk");
   }
 
-  &--insta {
+  &--insta::before {
     --social-icon: url("../../icons/sprite.svg#instagram");
   }
 
-  &--fb {
+  &--fb::before {
     --social-icon: url("../../icons/sprite.svg#facebook");
   }
 }
