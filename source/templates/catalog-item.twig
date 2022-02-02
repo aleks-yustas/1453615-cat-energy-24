@@ -7,18 +7,19 @@
     </a>
   </th>
   <td class="catalog-item__image">
-    {{ macros.picture(
-      "catalog-item__img",
-      "/img/catalog/",
-      catalogItem.image,
-      "png",
-      "",
-      null,
-      null,
-      false,
-      true
-    ) }}
-    {# <img src="img/catalog/{{ catalogItem.image }}.png" width="68" height="78" alt=""> #}
+    <a class="catalog-item__image-link" href="#">
+      {{ macros.picture(
+        "catalog-item__img",
+        "/img/catalog/",
+        catalogItem.image,
+        "png",
+        "",
+        null,
+        null,
+        false,
+        true
+      ) }}
+    </a>
   </td>
   <td class="catalog-item__weight">{{ catalogItem.weight }} г.</td>
   <td class="catalog-item__tasty">{{ catalogItem.tasty }}</td>

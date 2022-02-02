@@ -176,6 +176,10 @@
     }
   }
 
+  &[aria-current="page"] {
+    pointer-events: none;
+  }
+
   &:hover {
     opacity: 0.6;
   }

@@ -94,7 +94,6 @@
       <div class="result__compare compare">
         <figure class="compare__images">
           <figcaption class="page__hidden">Сравнение внешнего вида кота до и после похудения</figcaption>
-          <div class="compare__image-container compare__image-container--before">
             <div class="compare__image compare__image--before">
 
               {{ macros.picture(
@@ -110,8 +109,6 @@
               ) }}
 
             </div>
-          </div>
-          <div class="compare__image-container compare__image-container--after">
             <div class="compare__image compare__image--after">
 
               {{ macros.picture(
@@ -127,19 +124,15 @@
               ) }}
 
             </div>
-          </div>
         </figure>
         <div class="compare__control compare-toggler" hidden>
-          <div class="compare-toggler__title compare-toggler__title--before">Было</div>
+          <button class="compare-toggler__title compare-toggler__title--before" type="button">Было</button>
           <div class="compare-toggler__control">
-            <button class="compare-toggler__slider" style="left: 50%">
-              <span class="page__hidden">Сравнить</span>
-            </button>
-            <button class="compare-toggler__button compare-toggler__button--left" type="button">
+            <button class="compare-toggler__button" type="button">
               <span class="page__hidden">Сравнить</span>
             </button>
           </div>
-          <div class="compare-toggler__title compare-toggler__title--after">Стало</div>
+          <button class="compare-toggler__title compare-toggler__title--after" type="button">Стало</button>
         </div>
       </div>
     </div>
