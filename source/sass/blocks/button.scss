@@ -6,7 +6,7 @@
 
   font-family: var(--accent-font);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   color: var(--text-color-contrast);
   text-transform: uppercase;
@@ -15,6 +15,13 @@
 
   background-color: var(--bg-color-accent);
   cursor: pointer;
+
+  @media (--not-narrow-vp) {
+    padding: 17px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &:hover {
     background-color: var(--bg-color-accent-bright);

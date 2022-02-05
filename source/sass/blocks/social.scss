@@ -1,5 +1,5 @@
 .social {
-  padding: 20px;
+  padding: 10px 20px;
 
   @media (--not-narrow-vp) {
     padding: 0;
@@ -17,13 +17,23 @@
 }
 
 .social__item {
-  margin: 10px;
+  margin: 10px 15px;
+
+  @media (--not-narrow-vp) {
+    margin: 10px;
+  }
 }
 
 .social__link {
+  --icon-width: 21px;
+
   display: grid;
-  width: 30px;
-  height: 30px;
+  width: var(--icon-width);
+  height: var(--icon-width);
+
+  @media (--not-narrow-vp) {
+    --icon-width: 30px;
+  }
 
   &:hover::before {
     background: var(--bg-color-accent);
@@ -38,22 +48,22 @@
 
     grid-area: 1 / 1 / 2 / 2;
     display: block;
-    width: 30px;
-    height: 30px;
+    width: var(--icon-width);
+    height: var(--icon-width);
 
     background: var(--text-color-light);
-    mask: var(--social-icon) no-repeat center / cover;
+    mask: var(--icon-path) no-repeat center / cover;
   }
 
-  &--vk::before {
-    --social-icon: url("../../icons/sprite.svg#vk");
+  &--vk {
+    --icon-path: url("../../icons/sprite.svg#vk");
   }
 
-  &--insta::before {
-    --social-icon: url("../../icons/sprite.svg#instagram");
+  &--insta {
+    --icon-path: url("../../icons/sprite.svg#instagram");
   }
 
-  &--fb::before {
-    --social-icon: url("../../icons/sprite.svg#facebook");
+  &--fb {
+    --icon-path: url("../../icons/sprite.svg#facebook");
   }
 }

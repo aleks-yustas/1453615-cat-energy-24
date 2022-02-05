@@ -1,7 +1,7 @@
 .catalog-all {
   position: relative;
 
-  padding: 25px 0 25px;
+  padding: 7px 0 25px;
   text-align: center;
 
   @media (--not-narrow-vp) {
@@ -33,7 +33,7 @@
     @media (--not-narrow-vp) {
       z-index: -1;
 
-      top: 81px;
+      top: 74px;
       right: 0;
       bottom: 0;
       left: 0;
@@ -57,14 +57,15 @@
 
 .catalog-all__title {
   --decoration-color: #d3d3d3;
-  --decoration-width: 30px;
-  --decoration-height: 2px;
+  --decoration-width: 2px;
+  --decoration-height: 30px;
+  --decoration-offset: 15px;
 
   position: relative;
 
   margin-top: 0;
   margin-bottom: 8px;
-  padding-top: 53px;
+  padding-top: 66px;
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -75,11 +76,12 @@
   color: #111111;
 
   @media (--not-narrow-vp) {
-    --decoration-width: 60px;
+    --decoration-height: 60px;
+    --decoration-offset: 45px;
 
     max-width: 150px;
     margin-bottom: 23px;
-    padding-top: 161px;
+    padding-top: 154px;
 
     font-size: 20px;
     line-height: 22px;
@@ -90,7 +92,7 @@
     content: "";
 
     position: absolute;
-    top: calc(var(--decoration-width) - var(--decoration-height) / 2);
+    top: var(--decoration-offset);
     left: calc(50% - var(--decoration-width) / 2);
 
     display: block;
@@ -107,16 +109,26 @@
 
 .catalog-all__text {
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
+
+  font-size: 12px;
+  line-height: 16px;
 
   @media (--not-narrow-vp) {
     max-width: 170px;
-    margin-bottom: 0;
 
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
 .catalog-all__button {
   margin-top: auto;
+
+  @media (--not-narrow-vp) {
+    padding: 10px 20px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

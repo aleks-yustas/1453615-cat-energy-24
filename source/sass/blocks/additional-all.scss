@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 290px;
-  padding: 59px 60px 43px;
+  padding: 59px 58px 43px;
 
   font-weight: 400;
   font-size: 16px;
@@ -26,9 +26,11 @@
     flex-direction: row;
     min-height: 200px;
     padding: 57px 124px 60px 77px;
+
+    background-position: center top 60%;
   }
 
-  @media (--narrow-vp) {
+  @media (--middle-vp) {
     background-image: url("../../img/gift-m@1x.jpg");
     background-size: cover;
 
@@ -61,7 +63,7 @@
 
   text-align: center;
 
-  @media (--narrow-vp) {
+  @media (--middle-vp) {
     text-align: left;
   }
 }

@@ -1,8 +1,8 @@
 <tr class="catalog-list__item catalog-item">
   <th class="catalog-item__title" scope="row">
     <a class="catalog-item__link" href="#">
-      {{ catalogItem.title }}
-      <br>
+      Cat Energy
+      {{ catalogItem.type }}
       {{ catalogItem.weight}}&nbsp;г
     </a>
   </th>
@@ -25,6 +25,6 @@
   <td class="catalog-item__tasty">{{ catalogItem.tasty }}</td>
   <td class="catalog-item__price">{{ catalogItem.price }} Р.</td>
   <td class="catalog-item__order">
-    <a class="button button--size_wide" href="#">Заказать</a>
+    <a class="button button--size_wide catalog-item__order-link" href="#">Заказать</a>
   </td>
 </tr>

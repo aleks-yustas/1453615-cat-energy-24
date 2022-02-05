@@ -1,16 +1,12 @@
 .main-header {
   @media (--not-narrow-vp) {
-    padding-top: 24px;
-    padding-bottom: 42px;
-  }
-
-  @media (--wide-vp) {
-    padding-bottom: 64px;
+    padding-top: 29px;
+    padding-bottom: 43px;
   }
 
   @media (--wide-vp) {
     padding-top: 53px;
-    padding-bottom: 29px;
+    padding-bottom: 28px;
   }
 }
 

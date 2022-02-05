@@ -3,18 +3,28 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 20px 0 25px;
+  padding: 20px 0 23px;
 
   @media (--not-narrow-vp) {
+    --background-offset: 73px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 39px 39px;
+    padding: 0 36px 39px;
 
-    background-image: linear-gradient(to bottom, transparent 0%, transparent 81px, var(--bg-color-lighten) 81px, var(--bg-color-lighten) 100%);
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent var(--background-offset),
+      var(--bg-color-lighten) var(--background-offset),
+      var(--bg-color-lighten) 100%
+    );
   }
 
   @media (--wide-vp) {
+    --background-offset: 82px;
+
     padding: 0 38px 40px 38px;
   }
 
@@ -37,7 +47,7 @@
 }
 
 .catalog-item__title {
-  margin-bottom: 18px;
+  margin-bottom: 3px;
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -45,6 +55,7 @@
   line-height: 20px;
   color: var(--text-color-dark);
   text-align: left;
+  text-transform: uppercase;
 
   @media (--not-narrow-vp) {
     margin-bottom: 21px;
@@ -55,6 +66,8 @@
   }
 
   @media (--wide-vp) {
+    margin-bottom: 26px;
+
     line-height: 21px;
   }
 }
@@ -65,7 +78,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 140px;
   width: 100%;
 
   @media (--not-narrow-vp) {
@@ -76,7 +88,7 @@
   }
 
   @media (--wide-vp) {
-    margin-bottom: 46px;
+    margin-bottom: 40px;
   }
 }
 
@@ -85,8 +97,15 @@
 }
 
 .catalog-item__link {
+  display: block;
+
   color: inherit;
   text-decoration: none;
+  width: 80px;
+
+  @media (--not-narrow-vp) {
+    width: 145px;
+  }
 }
 
 .catalog-item__weight,
@@ -96,7 +115,6 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin-bottom: 6px;
 
   font-size: 12px;
   line-height: 14px;
@@ -105,6 +123,9 @@
     position: relative;
 
     margin-bottom: 14px;
+
+    font-size: 16px;
+    line-height: 16px;
   }
 
   &::before {
@@ -128,6 +149,10 @@
   }
 }
 
+.catalog-item__price {
+  margin-bottom: 5px;
+}
+
 .catalog-item__weight::before {
   content: "Масса";
 }
@@ -143,9 +168,16 @@
 .catalog-item__order {
   grid-column: 1 / -1;
   width: 100%;
-  margin-top: 13px;
+  margin-top: 12px;
 
   @media (--not-narrow-vp) {
-    margin-top: 33px;
+    margin-top: 31px;
   }
+}
+
+.catalog-item__order-link {
+  padding: 10px 20px;
+
+  font-size: 16px;
+  line-height: 20px;
 }

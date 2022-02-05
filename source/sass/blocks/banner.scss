@@ -22,7 +22,7 @@
 
     background-color: var(--bg-color-accent);
     background-image: var(--banner-gradient), url("../../img/bg-banner-s@1x.jpg");
-    background-position: center;
+    background-position: center, right 101% center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -40,7 +40,7 @@
       z-index: -1;
 
       width: 50%;
-      height: 696px;
+      height: 693px;
 
       background-image: var(--banner-gradient), url("../../img/bg-banner-l@1x.jpg");
 
@@ -75,6 +75,8 @@
 
   @media (--not-narrow-vp) {
     width: 440px;
+    margin-left: 87px;
+    padding-top: 17px;
 
     text-align: left;
     color: var(--text-color-accent);
@@ -129,14 +131,11 @@
   justify-content: center;
   align-items: center;
 
-  @media (--narrow-vp) {
-    margin-bottom: 3px;
-  }
-
   @media (--middle-vp) {
     z-index: -1;
 
     order: 1;
+    width: 709px;
     align-self: center;
     margin-top: -83px;
   }
@@ -148,11 +147,17 @@
   }
 }
 
+.banner__picture {
+  width: 100%;
+  height: auto;
+}
+
 .banner__link {
   width: 100%;
 
   @media (--not-narrow-vp) {
     width: 244px;
+    margin-left: 90px;
   }
 
   @media (--wide-vp) {

@@ -5,9 +5,9 @@
 {% block page__main %}
 
 <main class="page__main">
-  <div class="page__centerer page__title page__title--subtitled page-title">
+  <div class="page__centerer page__title page__title page-title page-title--subtitled">
     <h1 class="page-title__header">Подбор программы</h1>
-    <p class="page-title__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <p class="page-title__text">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
   </div>
   <section class="page__brief brief">
     <div class="page__centerer">
@@ -44,8 +44,8 @@
           </label>
         </div>
         <div class="form__fieldset form__fieldset--feedback form-fieldset form-fieldset--text-inputs form-fieldset--feedback" role="group" aria-labelledby="brief_cat_owner">
-          <div class="form-fieldset__legend section-title" id="brief_cat_owner">
-            <div class="section-title__text section-title__text--decoration">Контактные&nbsp;данные (владельца&nbsp;кота)</div>
+          <div class="form-fieldset__legend form-fieldset__legend--feedback section-title" id="brief_cat_owner">
+            <div class="section-title__text section-title__text--decoration  section-title__text--line">Контактные&nbsp;данные (владельца&nbsp;кота)</div>
           </div>
           <div class="form__field form-input form-input--type_email">
             <label class="form-input__label" for="brief_owner_email">E-mail:*</label>
@@ -59,26 +59,26 @@
           </div>
         </div>
         <div class="form__fieldset form__fieldset--comment form-fieldset form-textarea">
-          <label class="form-fieldset__legend section-title" for="brief_comment">
+          <label class="form-fieldset__legend form-fieldset__legend--comment section-title" for="brief_comment">
             <span class="section-title__text section-title__text--decoration">Комментарий</span>
           </label>
           <textarea class="form-textarea__field" id="brief_comment" name="brief_comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <div class="form__fieldset form__fieldset--checkbox form-fieldset form-fieldset--checkbox" role="group" aria-labelledby="brief_add_info">
-          <div class="form-fieldset__legend section-title" id="brief_add_info">
+          <div class="form-fieldset__legend form-fieldset__legend--checkbox section-title" id="brief_add_info">
             <div class="section-title__text section-title__text--decoration">Дополнительно</div>
           </div>
           <label class="form__field form-checkbox" for="brief_additional_shugar_substitute">
             <input class="form-checkbox__input" id="brief_additional_shugar_substitute" type="checkbox" name="brief_additional" value="shugar_substitute" checked>
             Сахарозаменитель
           </label>
+          <label class="form__field form-checkbox" for="brief_additional_water">
+            <input class="form-checkbox__input" id="brief_additional_water" type="checkbox" name="brief_additional" value="water">
+            Питьевая вода
+          </label>
           <label class="form__field form-checkbox" for="brief_additional_milk">
             <input class="form-checkbox__input" id="brief_additional_milk" type="checkbox" name="brief_additional" value="milk">
             Молоко
-          </label>
-          <label class="form__field form-checkbox" for="brief_additional_water">
-            <input class="form-checkbox__input" id="brief_additional_water" type="checkbox" name="brief_additional" value="water">
-            Вода
           </label>
           <label class="form__field form-checkbox" for="brief_additional_vitamins">
             <input class="form-checkbox__input" id="brief_additional_vitamins" type="checkbox" name="brief_additional" value="vitamins">

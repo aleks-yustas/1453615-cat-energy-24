@@ -1,7 +1,7 @@
 .additional-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 13px 0 19px;
+  padding: 13px 0 17px;
 
   border-top: 1px solid var(--border-color-darken);
 
@@ -13,7 +13,7 @@
   @media (--wide-vp) {
     grid-template-columns: 1fr 245px 80px 245px;
     align-items: center;
-    padding: 15px 0 17px;
+    padding: 15px 0 14px;
   }
 
   &:last-child {
@@ -24,7 +24,7 @@
 .additional-item__title {
   grid-column: 1 / -1;
   width: 100%;
-  margin-bottom: 13px;
+  margin-bottom: 7px;
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -36,6 +36,7 @@
 
   @media (--not-narrow-vp) {
     grid-column: auto;
+    margin-bottom: 20px;
 
     font-size: 20px;
     line-height: 20px;
@@ -47,7 +48,7 @@
 }
 
 .additional-item__count {
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 
   @media (--not-narrow-vp) {
     text-align: right;
@@ -61,7 +62,7 @@
 }
 
 .additional-item__price {
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 
   text-align: right;
 
@@ -83,4 +84,8 @@
 
 .additional-item__button {
   width: 100%;
+  padding: 10px 20px;
+
+  font-size: 16px;
+  line-height: 20px;
 }

@@ -13,8 +13,8 @@
     <div class="page__centerer">
       <h2 class="page__hidden">Основные товары</h2>
       <table class="catalog__list catalog-list">
-        <tbody class="catalog-list__body">
-          <tr class="page__hidden">
+        <thead class="page__hidden">
+          <tr>
             <th scope="col">Название товара</th>
             <th scope="col">Изображение товара</th>
             <th scope="col">Масса</th>
@@ -22,6 +22,8 @@
             <th scope="col">Цена</th>
             <th scope="col">Заказ</th>
           </tr>
+        </thead>
+        <tbody class="catalog-list__body">
 
           {% for catalogItem in catalogItems %}
             {% include "./templates/catalog-item.twig" %}
@@ -40,22 +42,28 @@
   </section>
   <section class="page__additional additional">
     <div class="additional__container page__centerer">
-      <h2 class="additional__title section-title section-title--decoration">Дополнительные товары</h2>
+      <h2 class="additional__title section-title">
+        <span class="section-title__text section-title__text--decoration">Дополнительные товары</span>
+      </h2>
       <table class="additional__list">
-        <tr class="page__hidden">
-          <th scope="col">Название товара</th>
-          <th scope="col">Количество</th>
-          <th scope="col">Цена</th>
-          <th scope="col">Заказ</th>
-        </tr>
+        <thead class="page__hidden">
+          <tr>
+            <th scope="col">Название товара</th>
+            <th scope="col">Количество</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Заказ</th>
+          </tr>
+        </thead>
+        <tbody>
 
         {% for additionalItem in additionalItems %}
           {% include "./templates/additional-item.twig" %}
         {% endfor %}
 
+        </tbody>
       </table>
       <a href="#" class="additional__order-all additional-all">
-        <span class="additional-all__text">Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!</span>
+        <span class="additional-all__text">Закажите все и&nbsp;получите чехол&nbsp;для кота в&nbsp;подарок!</span>
       </a>
     </div>
   </section>

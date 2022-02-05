@@ -23,14 +23,14 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 26px 0;
+  padding: 17px 0;
 
   background-color: var(--contact-bg-color);
 
   @media (--not-narrow-vp) {
     align-items: stretch;
 
-    padding: 56px 40px;
+    padding: 55px 40px;
   }
 
   @media (--not-wide-vp) {
@@ -39,7 +39,7 @@
 
   @media (--wide-vp) {
     width: 565px;
-    padding: 56px 80px;
+    padding: 55px 77px;
 
     pointer-events: initial;
   }
@@ -55,6 +55,7 @@
   flex-shrink: 0;
   width: 140px;
   margin: 0;
+  padding: 9px 0;
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -65,6 +66,7 @@
 
   @media (--not-narrow-vp) {
     width: 170px;
+    padding: 5px 0;
 
     font-size: 20px;
     line-height: 26px;
@@ -97,10 +99,18 @@
 
 .contact__place {
   margin: 0;
+
+  @media (--wide-vp) {
+    margin-bottom: 10px;
+  }
 }
 
 .contact__city {
   margin: 0;
+
+  @media (--wide-vp) {
+    margin-bottom: 7px;
+  }
 }
 
 .contact__map {

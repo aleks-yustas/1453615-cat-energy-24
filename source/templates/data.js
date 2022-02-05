@@ -10,13 +10,13 @@ export default {
     { "id": "fb", "link": "https://www.facebook.com/htmlacademy", "name": "Кэт энерджи в Фейсбуке" }
   ],
   "catalogItems": [
-    { "id": 0, "title": "Cat Energy PRO", "image": "pro-chiken-500", "weight": 500, "tasty": "Курица", "price": 700 },
-    { "id": 1, "title": "Cat Energy PRO", "image": "pro-chiken-1000", "weight": 1000, "tasty": "Курица", "price": 1000 },
-    { "id": 2, "title": "Cat Energy PRO", "image": "pro-fish-500", "weight": 500, "tasty": "Рыба", "price": 700 },
-    { "id": 3, "title": "Cat Energy PRO", "image": "pro-fish-1000", "weight": 1000, "tasty": "Рыба", "price": 1000 },
-    { "id": 4, "title": "Cat Energy Slim", "image": "slim-buckwheat-500", "weight": 500, "tasty": "Гречка", "price": 400 },
-    { "id": 5, "title": "Cat Energy Slim", "image": "slim-buckwheat-1000", "weight": 1000, "tasty": "Гречка", "price": 700 },
-    { "id": 6, "title": "Cat Energy Slim", "image": "slim-rice-500", "weight": 500, "tasty": "Рис", "price": 500 }
+    { "id": 0, "type": "PRO", "image": "pro-chiken-500", "weight": 500, "tasty": "Курица", "price": 700 },
+    { "id": 1, "type": "PRO", "image": "pro-chiken-1000", "weight": 1000, "tasty": "Курица", "price": 1000 },
+    { "id": 2, "type": "PRO", "image": "pro-fish-500", "weight": 500, "tasty": "Рыба", "price": 700 },
+    { "id": 3, "type": "PRO", "image": "pro-fish-1000", "weight": 1000, "tasty": "Рыба", "price": 1000 },
+    { "id": 4, "type": "Slim", "image": "slim-buckwheat-500", "weight": 500, "tasty": "Гречка", "price": 400 },
+    { "id": 5, "type": "Slim", "image": "slim-buckwheat-1000", "weight": 1000, "tasty": "Гречка", "price": 700 },
+    { "id": 6, "type": "Slim", "image": "slim-rice-500", "weight": 500, "tasty": "Рис", "price": 500 }
   ],
   "additionalItems": [
     { "id": 0, "title": "Сахарозаменитель", "packaging": "1 упаковка (100 г)", "price": 200 },

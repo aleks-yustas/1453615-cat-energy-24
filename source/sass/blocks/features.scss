@@ -6,13 +6,13 @@
   }
 
   @media (--not-narrow-vp) {
-    padding-bottom: 47px;
+    padding-bottom: 0;
   }
 }
 
 .features__title {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   @media (--not-narrow-vp) {
     margin-bottom: 72px;
@@ -32,7 +32,7 @@
 
   @media (--not-narrow-vp) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 90px;
+    column-gap: 60px;
     row-gap: 90px;
   }
 
@@ -115,5 +115,13 @@
 
   &--icon_weight::before {
     --icon: url("../../icons/sprite.svg#scales");
+  }
+}
+
+.features__text {
+  margin: 0;
+
+  @media (--not-narrow-vp) {
+    width: 245px;
   }
 }

@@ -1,12 +1,16 @@
 <footer class="page__footer main-footer">
   <div class="main-footer__container page__centerer">
-    <a class="main-footer__item logo logo--footer" href="#" aria-current="page" aria-label="Логотип «Кэт энерджи».">
-      <img class="logo__text" src="img/logo-cat-energy.svg#logo-text-additional" width="101" height="18" alt="">
+    <a class="main-footer__item logo logo--footer" href="#"
+      {% if permalink == pages[0].path %}
+        aria-current="page"
+      {% endif %}
+    aria-label="Логотип «Кэт энерджи».">
+      <img class="logo__text logo__text--footer" src="img/logo-cat-energy.svg#logo-text-additional" width="128" height="24" alt="">
     </a>
 
     {% include "./socials.twig" %}
 
-    <a class="main-footer__item creators" href="https://htmlacademy.ru/" rel="noopener nofollow" target="_blank">
+    <a class="main-footer__item creators" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener nofollow" target="_blank">
       <span class="creators__text">HTML Academy</span>
     </a>
   </div>

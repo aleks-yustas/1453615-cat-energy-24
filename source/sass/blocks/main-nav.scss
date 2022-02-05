@@ -141,7 +141,7 @@
 
   display: block;
   width: 100%;
-  padding: 22px 20px;
+  padding: 24px 20px 22px;
 
   font-weight: 500;
   font-size: 20px;
@@ -166,13 +166,18 @@
 
       position: absolute;
       right: 0;
-      bottom: -10px;
+      bottom: -7px;
       left: 0;
 
       display: block;
       height: 2px;
 
       background-color: var(--bg-color-accent);
+    }
+
+    @media (--wide-vp) {
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 
