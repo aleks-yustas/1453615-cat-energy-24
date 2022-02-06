@@ -64,6 +64,9 @@
   text-align: center;
 
   @media (--middle-vp) {
+    max-width: 162px;
+    padding-top: 5px;
+
     text-align: left;
   }
 }

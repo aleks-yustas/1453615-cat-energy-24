@@ -40,6 +40,10 @@
 
       border: 1px solid var(--border-color-light);
     }
+
+    @media (--wide-vp) {
+      top: 83px;
+    }
   }
 
   &::after {
@@ -85,6 +89,12 @@
 
     font-size: 20px;
     line-height: 22px;
+  }
+
+  @media (--wide-vp) {
+    --decoration-offset: 52px;
+
+    padding-top: 160px;
   }
 
   &::before,

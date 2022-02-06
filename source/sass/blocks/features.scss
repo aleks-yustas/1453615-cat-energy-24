@@ -2,10 +2,11 @@
   padding-bottom: 49px;
 
   @media (--middle-vp) {
+    padding-bottom: 59px;
     border-bottom: 1px solid var(--border-color-light);
   }
 
-  @media (--not-narrow-vp) {
+  @media (--wide-vp) {
     padding-bottom: 0;
   }
 }
@@ -88,7 +89,7 @@
 
       position: absolute;
       top: 0;
-      left: 120px;
+      left: 115px;
       z-index: -1;
 
       display: block;

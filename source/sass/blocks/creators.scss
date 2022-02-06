@@ -12,7 +12,11 @@
 
   @media (--not-narrow-vp) {
     justify-content: flex-end;
-    padding: 0;
+    padding: 0 0 8px 0;
+  }
+
+  @media (--wide-vp) {
+    padding: 6px 0 0 0;
   }
 
   &:hover::after {

@@ -45,6 +45,8 @@
       max-width: 45px;
       height: 1px;
 
+      font-size: inherit;
+
       background-image: repeating-linear-gradient(to right, var(--decoration-color), var(--decoration-color) 1px, transparent 1px, transparent 2px);
       opacity: 0.24;
       transform: translateX(-50%);

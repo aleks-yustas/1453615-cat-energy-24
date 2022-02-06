@@ -67,7 +67,7 @@
     margin-bottom: 34px;
 
     @media (--not-narrow-vp) {
-      margin-bottom: 54px;
+      margin-bottom: 53px;
     }
 
     @media (--wide-vp) {
@@ -98,6 +98,7 @@
 
   @media (--not-narrow-vp) {
     font-size: 20px;
+    padding: 15px 20px;
   }
 }
 

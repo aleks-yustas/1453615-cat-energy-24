@@ -9,7 +9,7 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
   text-transform: uppercase;
 
   @media (--not-narrow-vp) {
@@ -19,7 +19,7 @@
 
   &--type_email .form-input__field,
   &--type_phone .form-input__field {
-    padding: 14px 40px 14px 14px;
+    padding: 11px 40px 11px 14px;
 
     @media (--not-narrow-vp) {
       padding: 10px 40px 11px 20px;
@@ -38,7 +38,9 @@
 
 .form-input__field {
   flex-grow: 1;
-  padding: 14px 17px;
+  width: 100%;
+  margin: 0;
+  padding: 11px 17px;
   border: none;
 
   font: inherit;
@@ -46,6 +48,10 @@
 
   background-color: var(--bg-color-main);
   box-shadow: inset 0 0 0 1px var(--border-color-lighten);
+
+  &[type="number"] {
+    appearance: textfield;
+  }
 
   @media (--not-narrow-vp) {
     padding: 11px 20px;

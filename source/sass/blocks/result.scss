@@ -5,7 +5,7 @@
   background-color: var(--bg-color-dark);
 
   @media (--not-narrow-vp) {
-    padding-top: 103px;
+    padding-top: 0;
     padding-bottom: 55px;
 
     background-color: var(--bg-color-main);
@@ -41,7 +41,7 @@
   }
 
   @media (--wide-vp) {
-    padding-top: 49px;
+    padding-top: 44px;
   }
 }
 
@@ -61,6 +61,10 @@
 .result__text {
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media (--narrow-vp) {
+    letter-spacing: -0.1px;
+  }
 
   @media (--not-narrow-vp) {
     margin-bottom: 54px;
@@ -86,12 +90,12 @@
   @media (--not-narrow-vp) {
     grid-template-columns: 162px 162px 1fr;
     column-gap: 42px;
-    margin-bottom: 85px;
+    margin-bottom: 88px;
   }
 
   @media (--wide-vp) {
     grid-template-columns: repeat(2, 162px);
-    row-gap: 60px;
+    row-gap: 63px;
     margin-bottom: 0;
   }
 }

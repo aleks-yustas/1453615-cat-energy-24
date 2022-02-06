@@ -10,10 +10,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0 5px 0 0;
   padding: 0;
 
   list-style-type: none;
+
+  @media (--not-narrow-vp) {
+    margin-right: 7px;
+  }
 }
 
 .social__item {
