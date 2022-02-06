@@ -17,6 +17,7 @@
   border: none;
 
   font-family: var(--accent-font);
+  font-size: inherit;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
@@ -45,7 +46,6 @@
       max-width: 45px;
       height: 1px;
 
-      font-size: inherit;
 
       background-image: repeating-linear-gradient(to right, var(--decoration-color), var(--decoration-color) 1px, transparent 1px, transparent 2px);
       opacity: 0.24;
