@@ -10,7 +10,7 @@
   @media (--wide-vp) {
     grid-template-columns: 1fr 245px;
     column-gap: 79px;
-    row-gap: 80px;
+    row-gap: 81px;
   }
 }
 
@@ -29,8 +29,11 @@
 
 .additional__list {
   width: 100%;
+  margin: 0;
+  padding: 0;
   border: none;
-  border-collapse: collapse;
+
+  list-style: none;
 
   @media (--middle-vp) {
     border-right: 1px solid var(--border-color-darken);

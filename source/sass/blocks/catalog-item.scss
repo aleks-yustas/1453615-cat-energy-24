@@ -3,7 +3,7 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 20px 0 23px;
+  padding: 21px 0 24px;
 
   @media (--not-narrow-vp) {
     --background-offset: 73px;
@@ -47,7 +47,7 @@
 }
 
 .catalog-item__title {
-  margin-bottom: 3px;
+  margin: 0 0 16px 0;
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -66,7 +66,7 @@
   }
 
   @media (--wide-vp) {
-    margin-bottom: 22px;
+    margin-bottom: 26px;
 
     line-height: 21px;
   }
@@ -88,7 +88,7 @@
   }
 
   @media (--wide-vp) {
-    margin-bottom: 44px;
+    margin-bottom: 45px;
   }
 }
 
@@ -108,13 +108,18 @@
   }
 }
 
-.catalog-item__weight,
-.catalog-item__tasty,
-.catalog-item__price {
+.catalog-item__parameters {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item__parameter {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 2px;
 
   font-size: 12px;
   line-height: 14px;
@@ -122,7 +127,7 @@
   @media (--not-narrow-vp) {
     position: relative;
 
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 16px;
@@ -153,35 +158,20 @@
   margin-bottom: 5px;
 }
 
-.catalog-item__weight::before {
-  content: "Масса";
-}
-
-.catalog-item__tasty::before {
-  content: "Вкус";
-}
-
-.catalog-item__price::before {
-  content: "Цена";
-}
-
 .catalog-item__order {
   grid-column: 1 / -1;
   width: 100%;
   margin-top: 12px;
-
-  @media (--not-narrow-vp) {
-    margin-top: 31px;
-  }
-
-  @media (--wide-vp) {
-    margin-top: 35px;
-  }
-}
-
-.catalog-item__order-link {
   padding: 10px 20px;
 
   font-size: 16px;
   line-height: 20px;
+
+  @media (--not-narrow-vp) {
+    margin-top: 26px;
+  }
+
+  @media (--wide-vp) {
+    margin-top: 24px;
+  }
 }

@@ -1,30 +1,37 @@
-<tr class="catalog-list__item catalog-item">
-  <th class="catalog-item__title" scope="row">
+<li class="catalog-list__item catalog-item">
+  <h3 class="catalog-item__title" scope="row">
     <a class="catalog-item__link" href="#">
       Cat Energy
       {{ catalogItem.type }}
       {{ catalogItem.weight}}&nbsp;г
     </a>
-  </th>
-  <td class="catalog-item__image">
-    <a class="catalog-item__image-link" href="#">
-      {{ macros.picture(
-        "catalog-item__img",
-        "/img/catalog/",
-        catalogItem.image,
-        "png",
-        "",
-        null,
-        null,
-        false,
-        true
-      ) }}
-    </a>
-  </td>
-  <td class="catalog-item__weight">{{ catalogItem.weight }} г.</td>
-  <td class="catalog-item__tasty">{{ catalogItem.tasty }}</td>
-  <td class="catalog-item__price">{{ catalogItem.price }} Р.</td>
-  <td class="catalog-item__order">
-    <a class="button button--size_wide catalog-item__order-link" href="#">Заказать</a>
-  </td>
-</tr>
+  </h3>
+  <a class="catalog-item__image" href="#">
+    {{ macros.picture(
+      "catalog-item__img",
+      "/img/catalog/",
+      catalogItem.image,
+      "png",
+      "",
+      null,
+      null,
+      false,
+      true
+    ) }}
+  </a>
+  <dl class="catalog-item__parameters">
+    <div class="catalog-item__parameter">
+      <dt class="catalog-item__parameter-name">Масса</dt>
+      <dd class="catalog-item__parameter-count">{{ catalogItem.weight }} г.</dd>
+    </div>
+    <div class="catalog-item__parameter">
+      <dt class="catalog-item__parameter-name">Вкус</dt>
+      <dd class="catalog-item__parameter-count">{{ catalogItem.tasty }}</dd>
+    </div>
+    <div class="catalog-item__parameter">
+      <dt class="catalog-item__parameter-name">Цена</dt>
+      <dd class="catalog-item__parameter-count">{{ catalogItem.price }} Р.</dd>
+    </div>
+  </dl>
+  <a class="button button--size_wide catalog-item__order" href="#">Заказать</a>
+</li>

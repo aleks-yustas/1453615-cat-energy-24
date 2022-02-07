@@ -9,35 +9,21 @@
   <div class="page__centerer page__title page-title">
     <h1 class="page-title__header">Каталог продукции</h1>
   </div>
-  <section class="page__catalog catalog">
+  <section class="page__catalog">
     <div class="page__centerer">
       <h2 class="page__hidden">Основные товары</h2>
-      <table class="catalog__list catalog-list">
-        <thead class="page__hidden">
-          <tr>
-            <th scope="col">Название товара</th>
-            <th scope="col">Изображение товара</th>
-            <th scope="col">Масса</th>
-            <th scope="col">Вкус</th>
-            <th scope="col">Цена</th>
-            <th scope="col">Заказ</th>
-          </tr>
-        </thead>
-        <tbody class="catalog-list__body">
+      <ul class="catalog-list">
 
-          {% for catalogItem in catalogItems %}
-            {% include "./templates/catalog-item.twig" %}
-          {% endfor %}
+        {% for catalogItem in catalogItems %}
+          {% include "./templates/catalog-item.twig" %}
+        {% endfor %}
 
-          <tr class="catalog-list__item catalog-all">
-            <td class="catalog-all__content" colspan="6">
-              <p class="catalog-all__title">Показать еще 100500 товаров</p>
-              <p class="catalog-all__text">На самом деле вкусов гораздо больше!</p>
-              <a class="catalog-all__button button button--size_wide button--color_gray" href="#">Показать все</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <li class="catalog-list__item catalog-all">
+          <p class="catalog-all__title">Показать еще 100500 товаров</p>
+          <p class="catalog-all__text">На самом деле вкусов гораздо больше!</p>
+          <a class="catalog-all__button button button--size_wide button--color_gray" href="#">Показать все</a>
+        </li>
+      </ul>
     </div>
   </section>
   <section class="page__additional additional">
@@ -45,23 +31,13 @@
       <h2 class="additional__title section-title">
         <span class="section-title__text section-title__text--decoration">Дополнительные товары</span>
       </h2>
-      <table class="additional__list">
-        <thead class="page__hidden">
-          <tr>
-            <th scope="col">Название товара</th>
-            <th scope="col">Количество</th>
-            <th scope="col">Цена</th>
-            <th scope="col">Заказ</th>
-          </tr>
-        </thead>
-        <tbody>
+      <ul class="additional__list">
 
         {% for additionalItem in additionalItems %}
           {% include "./templates/additional-item.twig" %}
         {% endfor %}
 
-        </tbody>
-      </table>
+      </ul>
       <a href="#" class="additional__order-all additional-all">
         <span class="additional-all__text">Закажите все и&nbsp;получите чехол&nbsp;для кота в&nbsp;подарок!</span>
       </a>
