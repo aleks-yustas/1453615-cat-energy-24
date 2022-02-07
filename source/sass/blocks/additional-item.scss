@@ -1,7 +1,7 @@
 .additional-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 13px 0 17px;
+  padding: 13px 0 18px;
 
   border-top: 1px solid var(--border-color-darken);
 
@@ -24,7 +24,8 @@
 .additional-item__title {
   grid-column: 1 / -1;
   width: 100%;
-  margin-bottom: 7px;
+  margin-top: 0;
+  margin-bottom: 12px;
 
   font-family: var(--accent-font);
   font-weight: 400;
@@ -36,7 +37,7 @@
 
   @media (--not-narrow-vp) {
     grid-column: auto;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     font-size: 20px;
     line-height: 20px;
@@ -48,7 +49,8 @@
 }
 
 .additional-item__count {
-  margin-bottom: 11px;
+  margin-top: 0;
+  margin-bottom: 12px;
 
   @media (--not-narrow-vp) {
     text-align: right;
@@ -62,6 +64,7 @@
 }
 
 .additional-item__price {
+  margin-top: 0;
   margin-bottom: 11px;
 
   text-align: right;
